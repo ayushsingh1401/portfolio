@@ -2,878 +2,2199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ayush Singh — Help Desk & Technical Support</title>
-<meta name="description" content="Portfolio of Ayush Singh, a BCA graduate seeking help desk and technical support roles.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVBHOOMI Paints and hardware</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
- 
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ============ TOKENS ============ */
+/* =========================================================
+   Tokens
+   ========================================================= */
 :root {
-  --bg: #F4F6F8; --surface: #FFFFFF; --surface-2: #EAEDF1;
-  --text: #181E27; --text-muted: #5B6472; --border: #DEE3E9;
-  --accent: #C87F1E; --accent-2: #2E8F82; --btn-text: #14181F;
-  --nav-bg: rgba(244, 246, 248, 0.85); --nav-height: 76px;
-  --radius-sm: 8px; --radius-pill: 999px;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-  color-scheme: light;
+  --ink:        #1C1E26;
+  --ink-soft:   #565A6B;
+  --navy:       #101B33;
+  --navy-soft:  #1B2A4A;
+  --paper:      #FFFFFF;
+  --paper-cool: #F6F7F5;
+  --line:       #DEDFE3;
+  --line-soft:  #ECEDEF;
+  --brass:      #A6752F;
+  --maroon:     #7A2E2E;
+
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans:  'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono:  'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --radius: 3px;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #10141A; --surface: #171D26; --surface-2: #1D2430;
-    --text: #EDEFF2; --text-muted: #98A2B3; --border: #262E3B;
-    --accent: #E8A33D; --accent-2: #4FBDAE; --btn-text: #14181F;
-    --nav-bg: rgba(16, 20, 26, 0.75); color-scheme: dark;
-  }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper-cool);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.45;
 }
-:root[data-theme="dark"] {
-  --bg: #10141A; --surface: #171D26; --surface-2: #1D2430;
-  --text: #EDEFF2; --text-muted: #98A2B3; --border: #262E3B;
-  --accent: #E8A33D; --accent-2: #4FBDAE; --btn-text: #14181F;
-  --nav-bg: rgba(16, 20, 26, 0.75); color-scheme: dark;
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
- 
-/* ============ RESET & BASE ============ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
-body { font-family: var(--font-body); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-button { font-family: inherit; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
- 
+
+h1, h2 {
+  font-family: var(--serif);
+  margin: 0;
+  color: var(--navy);
+}
+
+
+.product-id-cell input{font-family:var(--mono)} .submit-invoice-btn{margin:14px 0 4px;width:100%;border:0;background:var(--navy);color:#fff;padding:12px 16px;border-radius:var(--radius);font-weight:700;cursor:pointer;transition:.18s} .submit-invoice-btn:hover{background:var(--navy-soft);transform:translateY(-1px)} .send-card{max-width:760px;background:var(--paper);border:1px solid var(--line);padding:22px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(16,27,51,.06)} .send-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.send-grid .field-wide{grid-column:1/-1}.send-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.whatsapp-btn{background:#1b8f45;color:#fff;border:0;padding:11px 16px;border-radius:var(--radius);font-weight:700;cursor:pointer}.send-pdf-btn{background:var(--navy);color:#fff;border:0;padding:11px 16px;border-radius:var(--radius);font-weight:600;cursor:pointer}.send-status{margin-left:8px;color:var(--brass);font-size:13px}@media(max-width:700px){.send-grid{grid-template-columns:1fr}.send-grid .field-wide{grid-column:auto}}
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important; scroll-behavior: auto !important;
-  }
+  * { transition: none !important; animation: none !important; }
 }
- 
-.skip-link { position: absolute; top: 0; left: -999px; background: var(--accent); color: var(--btn-text); padding: 0.85em 1.4em; z-index: 2000; border-radius: 0 0 8px 0; font-weight: 600; }
-.skip-link:focus { left: 0; }
- 
-/* ============ PERSISTENT ANIMATED BACKGROUND ============ */
-.bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-main, .footer { position: relative; z-index: 1; }
- 
-/* ============ SCROLL PROGRESS ============ */
-.scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 1500; width: 0%; }
- 
-/* ============ CUSTOM CURSOR ============ */
-.cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: 3000; }
-.cursor-dot { width: 6px; height: 6px; background: var(--accent); }
-.cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent-2); transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease; }
-.cursor-ring.hover { width: 54px; height: 54px; border-color: var(--accent); }
-.custom-cursor-active, .custom-cursor-active a, .custom-cursor-active button { cursor: none; }
-@media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none !important; } }
- 
-/* ============ SHARED LAYOUT ============ */
-section { padding: clamp(4rem, 8vw, 6rem) 0; position: relative; overflow: hidden; }
-.section-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1; }
-h2 { font-size: clamp(1.9rem, 3vw + 1rem, 2.6rem); margin-bottom: 2.5rem; }
- 
-.section-bg-icon { position: absolute; z-index: 0; font-size: 24rem; color: var(--accent-2); opacity: 0.05; pointer-events: none; top: 5%; right: -6%; }
-@media (max-width: 860px) { .section-bg-icon { font-size: 14rem; } }
- 
-.reveal, .reveal-scale { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal-scale { transform: translateY(18px) scale(0.93); }
-.reveal.in-view, .reveal-scale.in-view { opacity: 1; transform: translateY(0) scale(1); }
-.stagger > *:nth-child(1) { transition-delay: 0.05s; } .stagger > *:nth-child(2) { transition-delay: 0.1s; }
-.stagger > *:nth-child(3) { transition-delay: 0.15s; } .stagger > *:nth-child(4) { transition-delay: 0.2s; }
-.stagger > *:nth-child(5) { transition-delay: 0.25s; } .stagger > *:nth-child(6) { transition-delay: 0.3s; }
-.stagger > *:nth-child(7) { transition-delay: 0.35s; } .stagger > *:nth-child(8) { transition-delay: 0.4s; }
- 
-.btn {
-  position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 0.6em;
-  padding: 0.85em 1.6em; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.98rem;
-  cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease; border: 1px solid transparent;
+
+/* =========================================================
+   App shell
+   ========================================================= */
+.app {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
 }
-.btn:active { transform: scale(0.96); }
-.btn-primary { background: var(--accent); color: var(--btn-text); }
-.btn-primary:hover { transform: translateY(-2px); }
-.btn-secondary { background: transparent; border-color: var(--border); color: var(--text); }
-.btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-.magnetic { transition: transform 0.2s ease; }
-.ripple { position: absolute; width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; transform: translate(-50%, -50%) scale(0); animation: rippleAnim 0.6s ease-out; pointer-events: none; }
-@keyframes rippleAnim { to { transform: translate(-50%, -50%) scale(20); opacity: 0; } }
- 
-.tilt { transition: transform 0.15s ease, box-shadow 0.3s ease, opacity 0.6s ease; will-change: transform; }
-.tilt:hover { box-shadow: 0 0 0 1px var(--accent-2), 0 20px 40px -20px rgba(0,0,0,0.45); }
-.tilt:active { transform: scale(0.98) !important; }
- 
-.glitch { position: relative; display: inline-block; }
-.glitch::before, .glitch::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
-.glitch:hover::before { opacity: 1; color: var(--accent-2); clip-path: inset(0 0 60% 0); animation: glitchTop 0.4s steps(2) infinite; }
-.glitch:hover::after { opacity: 1; color: var(--accent); clip-path: inset(60% 0 0 0); animation: glitchBottom 0.4s steps(2) infinite; }
-@keyframes glitchTop { 0%{transform:translate(0,0);} 50%{transform:translate(-3px,-1px);} 100%{transform:translate(2px,1px);} }
-@keyframes glitchBottom { 0%{transform:translate(0,0);} 50%{transform:translate(3px,1px);} 100%{transform:translate(-2px,-1px);} }
- 
-/* ============ NAV ============ */
-.nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 900; display: flex; align-items: center; border-bottom: 1px solid transparent; transition: background 0.3s ease, border-color 0.3s ease; }
-.nav.scrolled { background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom-color: var(--border); }
-.nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; }
-.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; }
-.nav-links { display: flex; align-items: center; gap: 2rem; }
-.nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); position: relative; padding: 0.25rem 0; transition: color 0.2s ease; }
-.nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--accent); transition: width 0.25s ease; }
-.nav-links a:hover, .nav-links a.active { color: var(--text); }
-.nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
-.nav-actions { display: flex; align-items: center; gap: 1rem; }
-#themeToggle { background: none; border: 1px solid var(--border); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text); cursor: pointer; transition: border-color 0.2s ease, transform 0.3s ease; }
-#themeToggle:hover { border-color: var(--accent); transform: rotate(15deg); }
-.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 0; }
-.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--text); transition: transform 0.25s ease, opacity 0.25s ease; }
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-@media (max-width: 860px) {
-  .nav-toggle { display: flex; }
-  .nav-links { position: fixed; top: var(--nav-height); left: 0; right: 0; flex-direction: column; align-items: flex-start; background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.5rem; gap: 1.25rem; transform: translateY(-14px); opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease; z-index: 2; }
-  .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+
+.is-hidden { display: none !important; }
+
+/* ---------- Rail ---------- */
+.rail {
+  background: var(--navy);
+  color: #E9EBF2;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
- 
-/* ============ HERO ============ */
-.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: calc(var(--nav-height) + 2rem) 1.5rem 3rem; overflow: visible; }
-.hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; position: relative; z-index: 1; }
-.status-badge { display: inline-flex; align-items: center; gap: 0.6em; padding: 0.5em 1em; border: 1px solid var(--border); border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.75rem; opacity: 0; animation: heroFadeUp 0.6s ease 0.1s forwards; }
-.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #4CAF6D; box-shadow: 0 0 0 3px rgba(76,175,109,0.25); animation: statusPulse 2s ease-in-out infinite; }
-@keyframes statusPulse { 0%,100%{box-shadow:0 0 0 3px rgba(76,175,109,0.25);} 50%{box-shadow:0 0 0 6px rgba(76,175,109,0.12);} }
-.hero-title { font-size: clamp(2.6rem, 5.5vw + 1rem, 4.75rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; opacity: 0; animation: heroFadeUp 0.7s ease 0.25s forwards; }
-.hero-role { font-family: var(--font-mono); font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); color: var(--accent); margin-bottom: 1.25rem; min-height: 1.6em; opacity: 0; animation: heroFadeUp 0.7s ease 0.45s forwards; }
-.cursor-blink { animation: blink 0.9s step-end infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-.hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 46ch; margin-bottom: 2.25rem; opacity: 0; animation: heroFadeUp 0.7s ease 0.6s forwards; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; opacity: 0; animation: heroFadeUp 0.7s ease 0.75s forwards; }
-@keyframes heroFadeUp { from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);} }
-.hero-illustration { animation: floatY 4s ease-in-out infinite, heroFadeUp 0.8s ease 0.3s backwards; justify-self: center; width: min(340px, 80%); }
-@keyframes floatY { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
-@media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; } .hero-illustration { order: -1; width: 220px; } }
-.scroll-cue { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); width: 26px; height: 42px; border: 2px solid var(--border); border-radius: 14px; z-index: 1; }
-.scroll-cue::before { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 4px; height: 8px; background: var(--accent); border-radius: 2px; animation: scrollCue 1.6s ease infinite; }
-@keyframes scrollCue { 0%{opacity:1; transform:translate(-50%,0);} 70%{opacity:0; transform:translate(-50%,14px);} 100%{opacity:0; transform:translate(-50%,0);} }
- 
-/* ============ MARQUEE TICKER ============ */
-.marquee { position: relative; z-index: 1; width: 100%; overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); padding: 1rem 0; }
-.marquee-track { display: flex; width: max-content; gap: 2.5rem; animation: marqueeScroll 32s linear infinite; font-family: var(--font-mono); font-size: 1rem; color: var(--text-muted); white-space: nowrap; }
-.marquee-track span.dot { color: var(--accent); opacity: 0.6; }
-@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
- 
-/* ============ ABOUT ============ */
-.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3.5rem; }
-.about-text p { color: var(--text-muted); max-width: 58ch; margin-bottom: 1.1rem; font-size: 1.05rem; }
-.about-visual { display: flex; justify-content: center; }
-.monogram { position: relative; width: 200px; height: 200px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 3rem; font-weight: 700; }
-.monogram::before { content: ''; position: absolute; inset: -14px; border: 2px dashed var(--border); border-radius: 50%; animation: spin 26s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.stats-row { display: flex; flex-wrap: wrap; gap: 1.5rem 0; border-top: 1px solid var(--border); padding-top: 2.5rem; margin-bottom: 3rem; }
-.stat { flex: 1 1 140px; padding: 0 1.5rem; border-left: 1px solid var(--border); }
-.stat:first-child { border-left: none; padding-left: 0; }
-.stat-num { display: block; font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; margin-bottom: 0.25rem; }
-.stat-label { font-size: 0.9rem; color: var(--text-muted); }
-.terminal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); max-width: 520px; }
-.terminal-bar { display: flex; align-items: center; gap: 0.4rem; padding: 0.7rem 1rem; background: var(--surface-2); border-bottom: 1px solid var(--border); }
-.terminal-bar .dot { width: 10px; height: 10px; border-radius: 50%; }
-.dot.red{background:#ED6A5E;} .dot.yellow{background:#F4BF4F;} .dot.green{background:#61C554;}
-.terminal-title { margin-left: 0.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
-.terminal-body { padding: 1.25rem 1.5rem; font-family: var(--font-mono); font-size: 0.9rem; }
-.terminal-body p { margin-bottom: 0.6rem; }
-.terminal-body .prompt { color: var(--accent); margin-right: 0.4em; }
-.terminal-body .output { color: var(--text-muted); padding-left: 1.3em; }
-.terminal-body .output.success { color: #4CAF6D; }
-@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } .about-visual { order: -1; margin-bottom: 0.5rem; } .stat { flex: 1 1 45%; border-left: none; padding-left: 0; } }
- 
-/* ============ SKILLS (illustrated cards) ============ */
-.skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.75rem; }
-.skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.75rem; }
-.skill-icon-badge { width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
-.skill-icon-badge i { font-size: 1.5rem; color: var(--btn-text); }
-.skill-card h3 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text); font-weight: 600; }
-.pill-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.pill { display: inline-flex; align-items: center; gap: 0.45em; padding: 0.5em 0.9em; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.88rem; transition: border-color 0.2s ease, transform 0.2s ease, opacity 0.6s ease; }
-.pill:hover { border-color: var(--accent-2); transform: translateY(-3px) scale(1.03); }
-.pill i { color: var(--accent-2); font-size: 0.75em; }
- 
-/* ============ JOURNEY (with scroll-fill line) ============ */
-.timeline { position: relative; padding-left: 2.5rem; }
-.timeline-line-bg { position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
-.timeline-line-fill { position: absolute; left: 7px; top: 6px; width: 2px; height: 0%; background: linear-gradient(var(--accent), var(--accent-2)); }
-.timeline-item { position: relative; margin-bottom: 3rem; }
-.timeline-item:last-child { margin-bottom: 0; }
-.timeline-dot { position: absolute; left: -2.5rem; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
-.timeline-date { display: inline-flex; align-items: center; gap: 0.5em; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-2); margin-bottom: 0.5rem; }
-.timeline-content h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
-.timeline-content > p { color: var(--text-muted); max-width: 60ch; margin-bottom: 1rem; }
-.timeline-extra { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.75rem; }
-.timeline-extra i { color: var(--accent-2); }
-.timeline-content ul { display: grid; gap: 0.5rem; }
-.timeline-content ul li { color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2em; position: relative; }
-.timeline-content ul li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
- 
-/* ============ PROJECTS ============ */
-.project-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.project-card { padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
-.project-card.empty { border-style: dashed; background: transparent; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; color: var(--text-muted); min-height: 220px; }
-.project-card.empty i { font-size: 1.4rem; margin-bottom: 1rem; color: var(--border); }
-.project-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-.project-card p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.98rem; }
-.tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tag { font-family: var(--font-mono); font-size: 0.78rem; padding: 0.3em 0.7em; background: var(--surface-2); border-radius: 5px; color: var(--text-muted); }
- 
-/* ============ CONTACT ============ */
-.contact-intro { color: var(--text-muted); max-width: 50ch; margin-bottom: 2rem; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; }
-.contact-link { display: flex; align-items: center; gap: 0.85em; padding: 0.9rem 0; border-bottom: 1px solid var(--border); font-size: 1rem; transition: color 0.2s ease, padding-left 0.2s ease; }
-.contact-link:hover { color: var(--accent); padding-left: 0.4rem; }
-.contact-link i { width: 20px; color: var(--accent-2); }
-.contact-form { display: grid; gap: 1rem; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 0.9em 1em; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-family: var(--font-body); font-size: 0.98rem; transition: border-color 0.2s ease; }
-.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); outline: none; }
-.contact-form textarea { min-height: 120px; resize: vertical; }
-.form-hint { font-size: 0.82rem; color: var(--text-muted); }
-@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
- 
-/* ============ FOOTER & BACK TO TOP ============ */
-.footer { border-top: 1px solid var(--border); padding: 2.5rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
-#backToTop { position: fixed; bottom: 1.75rem; right: 1.75rem; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--btn-text); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease; z-index: 800; }
-#backToTop.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.rail-brand { display: flex; align-items: center; gap: 12px; }
+
+.rail-mark {
+  width: 36px; height: 36px;
+  border-radius: var(--radius);
+  background: var(--brass);
+  color: var(--navy);
+  font-family: var(--serif);
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.rail-title { display: flex; flex-direction: column; line-height: 1.25; }
+.rail-title strong { font-family: var(--serif); font-size: 17px; }
+.rail-title span { font-size: 12px; color: #9AA3BD; }
+
+.rail-nav { display: flex; flex-direction: column; gap: 4px; }
+
+.rail-btn {
+  text-align: left;
+  background: none;
+  border: none;
+  color: #C7CCDE;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rail-btn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.rail-btn.is-active { background: rgba(166, 117, 47, 0.18); color: #fff; font-weight: 500; }
+
+.rail-count {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  font-size: 11px;
+  padding: 1px 7px;
+  font-family: var(--mono);
+}
+
+.rail-foot { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+
+.rail-print {
+  background: var(--brass);
+  color: var(--navy);
+  border: none;
+  padding: 11px 14px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+.rail-print:hover { background: #B98436; }
+
+.rail-ghost {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #C7CCDE;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.rail-ghost:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+/* =========================================================
+   Views
+   ========================================================= */
+.view { padding: 32px 36px 64px; }
+
+#view-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.panel-head { margin-bottom: 22px; }
+.panel-head h1 { font-size: 24px; }
+.panel-head p { margin: 6px 0 0; color: var(--ink-soft); font-size: 13.5px; }
+
+.panel { min-width: 0; }
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-weight: 600;
+  margin: 26px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-panel .section-label:first-of-type { border-top: none; padding-top: 0; }
+
+.inline-check {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.inline-check input { margin: 0; }
+
+/* ---------- Fields ---------- */
+.field-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 14px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field span { font-size: 12px; color: var(--ink-soft); }
+.field-wide { grid-column: 1 / -1; }
+
+.field input, .field select, .field textarea {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 9px 10px;
+  background: var(--paper);
+}
+.field input:focus, .field select:focus, .field textarea:focus,
+.items-table input:focus, .items-table select:focus {
+  outline: 2px solid var(--brass);
+  outline-offset: 1px;
+  border-color: var(--brass);
+}
+.field textarea { resize: vertical; font-family: var(--sans); }
+
+/* ---------- Items table (editor) ---------- */
+.table-wrap { overflow-x: auto; }
+.items-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.items-table th {
+  text-align: left; font-size: 10.5px; color: var(--ink-soft); font-weight: 600;
+  padding: 0 5px 6px; border-bottom: 1px solid var(--line);
+}
+.items-table td { padding: 4px; vertical-align: middle; }
+.items-table input, .items-table select {
+  width: 100%; border: 1px solid transparent; background: var(--paper-cool);
+  border-radius: var(--radius); padding: 7px 6px; font-family: var(--sans);
+}
+.items-table input:hover, .items-table select:hover { border-color: var(--line); }
+.col-qty input, .col-rate input, .col-disc input { font-family: var(--mono); }
+
+.i-amt {
+  font-family: var(--mono); text-align: right; padding-right: 8px;
+  white-space: nowrap; color: var(--navy); font-weight: 500;
+}
+
+.col-del { width: 26px; }
+.i-del { border: none; background: none; color: var(--ink-soft); font-size: 18px; line-height: 1; cursor: pointer; padding: 4px 6px; }
+.i-del:hover { color: var(--maroon); }
+
+.add-row-btn {
+  margin-top: 10px; background: none; border: 1px dashed var(--line);
+  color: var(--navy-soft); padding: 9px 14px; border-radius: var(--radius);
+  cursor: pointer; font-weight: 500;
+}
+.add-row-btn:hover { border-color: var(--brass); color: var(--brass); }
+
+.saved-note { margin-left: 12px; font-size: 12.5px; color: var(--brass); }
+.settings-grid { max-width: 640px; margin-bottom: 14px; }
+
+/* =========================================================
+   Invoice preview — bordered tax-invoice replica
+   ========================================================= */
+.preview-panel { position: sticky; top: 24px; }
+
+.paper {
+  background: var(--paper);
+  border: 1px solid #000;
+  padding: 0;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 11px;
+  color: #000;
+  line-height: 1.35;
+}
+
+.inv-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid #000;
+  letter-spacing: 0.03em;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.doc-table td, .doc-table th {
+  border: 1px solid #000;
+  padding: 4px 6px;
+  vertical-align: top;
+  font-size: 10.5px;
+}
+
+.doc-table + .doc-table { border-top: none; }
+
+/* ---- header block ---- */
+.head-table { border-top: none; }
+.cell-seller { width: 45%; }
+.seller-name { font-weight: 700; font-size: 13px; margin-bottom: 3px; }
+.seller-line { margin-top: 1px; }
+.cell-label { font-size: 10px; color: #333; }
+.cell-label strong { display: block; font-size: 10.5px; color: #000; font-weight: 600; margin-top: 1px; }
+.cell-sub { margin-top: 4px; }
+.cell-terms { min-height: 18px; }
+
+/* ---- buyer / consignee ---- */
+.party-table { border-top: none; }
+.cell-party { width: 50%; }
+.cell-party strong { display: block; font-size: 11.5px; margin: 2px 0 3px; }
+.cell-party div { margin-top: 1px; }
+
+.strip-label {
+  display: block;
+  font-size: 9.5px;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+/* ---- items table ---- */
+.items-doc-table { border-top: none; }
+.items-doc-table th {
+  font-weight: 700; font-size: 10px; text-align: center; background: #F3F3F1;
+}
+.items-doc-table td { text-align: center; }
+.items-doc-table .col-desc { text-align: left; width: 30%; }
+.items-doc-table th.col-desc { text-align: left; }
+.items-doc-table .col-sl { width: 4%; }
+.items-doc-table .col-hsn { width: 10%; }
+.items-doc-table .col-qty { width: 10%; }
+.items-doc-table .col-rate { width: 10%; text-align: right; }
+.items-doc-table .col-unit { width: 6%; }
+.items-doc-table .col-disc { width: 7%; }
+.items-doc-table .col-amt { width: 13%; text-align: right; font-family: var(--mono); }
+
+.tax-line td { font-style: italic; font-weight: 600; }
+.tax-label { text-align: right; padding-right: 10px; }
+
+.total-line td { font-weight: 700; border-top: 1.5px solid #000; }
+.cell-total-label { text-align: center; }
+
+/* ---- amount in words strips ---- */
+.words-table { border-top: none; }
+.words-table td { font-size: 10.5px; }
+.words-table strong { display: block; margin-top: 2px; font-size: 11px; }
+.cell-eoe { width: 70px; text-align: center; vertical-align: middle; font-style: italic; }
+
+/* ---- HSN tax breakdown table ---- */
+.hsn-table { border-top: none; }
+.hsn-table th { font-weight: 700; font-size: 10px; text-align: center; background: #F3F3F1; }
+.hsn-table td { text-align: right; }
+.hsn-table td.col-hsn { text-align: center; }
+.hsn-table .col-rate { text-align: center; width: 8%; }
+
+/* ---- footer: declaration + bank ---- */
+.foot-table { border-top: none; }
+.cell-decl { width: 55%; font-size: 10px; }
+.cell-decl div { margin-top: 3px; white-space: pre-line; }
+.cell-bank { width: 45%; }
+.cell-bank div { margin-top: 2px; }
+
+.sign-block { margin-top: 30px; text-align: right; }
+.sign-line {
+  margin-top: 28px;
+  padding-top: 4px;
+  border-top: 1px solid #000;
+  font-size: 10px;
+}
+
+.paper-computer-note {
+  text-align: center;
+  font-size: 10px;
+  padding: 6px 0;
+  font-style: italic;
+  color: #333;
+}
+
+.inline-actions { display: flex; align-items: center; gap: 8px; }
+.mini-select, .mini-btn {
+  font-size: 11.5px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 5px 8px;
+  background: var(--paper);
+  cursor: pointer;
+}
+.mini-btn:hover { border-color: var(--brass); color: var(--brass); }
+
+.danger-note { font-size: 12.5px; color: var(--ink-soft); margin: 8px 0; max-width: 480px; }
+.danger-btn {
+  background: none;
+  border: 1px solid var(--maroon);
+  color: var(--maroon);
+  padding: 9px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+.danger-btn:hover { background: var(--maroon); color: #fff; }
+
+/* ---------- Master tables (items / parties) ---------- */
+.master-toolbar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.master-table { width: 100%; border-collapse: collapse; font-size: 13px; max-width: 1100px; }
+.master-table th {
+  text-align: left; font-size: 11px; color: var(--ink-soft); font-weight: 600;
+  padding: 0 8px 8px; border-bottom: 1px solid var(--line);
+}
+.master-table td { padding: 5px 8px; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+.master-table input[type="text"], .master-table input[type="number"] {
+  width: 100%; border: 1px solid transparent; background: var(--paper-cool);
+  border-radius: var(--radius); padding: 6px 7px; font-family: inherit;
+}
+.master-table input:hover { border-color: var(--line); }
+.master-table input[type="checkbox"] { width: auto; }
+.master-row-del {
+  border: none; background: none; color: var(--ink-soft); font-size: 17px;
+  line-height: 1; cursor: pointer; padding: 4px 6px;
+}
+.master-row-del:hover { color: var(--maroon); }
+
+/* ---------- Reports ---------- */
+.report-cards { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
+.report-card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 18px; min-width: 150px;
+}
+.report-card span { display: block; font-size: 11.5px; color: var(--ink-soft); }
+.report-card strong { display: block; font-family: var(--mono); font-size: 19px; color: var(--navy); margin-top: 4px; }
+
+/* =========================================================
+   History
+   ========================================================= */
+.history-list { display: flex; flex-direction: column; gap: 10px; max-width: 720px; }
+.history-item {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.history-item strong { font-family: var(--serif); font-size: 15px; }
+.history-item span { display: block; font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.history-actions { display: flex; gap: 8px; }
+.history-actions button {
+  border: 1px solid var(--line); background: var(--paper-cool); border-radius: var(--radius);
+  padding: 7px 12px; cursor: pointer;
+}
+.history-actions button:hover { border-color: var(--brass); }
+.history-actions button.danger:hover { border-color: var(--maroon); color: var(--maroon); }
+.history-empty { color: var(--ink-soft); font-size: 13.5px; }
+
+/* =========================================================
+   Modern motion & inventory UI
+   ========================================================= */
+body { overflow-x: hidden; }
+.view { animation: viewIn .38s ease both; }
+.panel, .report-card, .history-item, .table-wrap { transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.panel:hover, .report-card:hover { transform: translateY(-2px); }
+.rail-btn, .rail-print, .rail-ghost, .add-row-btn, .mini-btn, button { transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease; }
+button:hover { transform: translateY(-1px); }
+button:active { transform: translateY(0) scale(.98); }
+.rail-mark { box-shadow: 0 0 0 0 rgba(166,117,47,.35); animation: logoPulse 2.8s ease-in-out infinite; }
+.inventory-good { color: #1f6b43 !important; font-weight: 600; }
+.inventory-low { color: #a35b16 !important; font-weight: 600; }
+.inventory-out { color: #9a2f2f !important; font-weight: 700; }
+.inventory-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.pdf-page-actions { display:flex; gap:8px; justify-content:flex-end; margin-bottom:10px; flex-wrap:wrap; }
+.pdf-download-btn { background: var(--navy); color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600; box-shadow:0 8px 22px rgba(16,27,51,.12); }
+.excel-linked { color:#15803d !important; font-weight:600; }
+.excel-warning { color:#a35b16 !important; font-weight:600; }
+
+.ppt-download-btn { background: #6d3f9e; color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600; }
+@keyframes viewIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+@keyframes logoPulse { 0%,100% { box-shadow:0 0 0 0 rgba(166,117,47,.25); } 50% { box-shadow:0 0 0 7px rgba(166,117,47,0); } }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 1080px) {
+  .app { grid-template-columns: 1fr; }
+  .rail { position: static; height: auto; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .rail-nav { flex-direction: row; }
+  .rail-foot { flex-direction: row; margin-top: 0; margin-left: auto; }
+  #view-editor { grid-template-columns: 1fr; }
+  .preview-panel { position: static; }
+  .field-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   Print
+   ========================================================= */
+@media print {
+  body { background: #fff; }
+  .rail, .form-panel, #view-history, #view-settings { display: none !important; }
+  .app { display: block; }
+  #view-editor { display: block; }
+  .preview-panel { position: static; }
+  .paper { border: none; }
+  .pdf-page-actions { display: none !important; }
+}
+
+
+.settings-help{margin:-4px 0 14px;color:var(--ink-soft);font-size:13px}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
- 
-<canvas class="bg-canvas" id="bgCanvas" aria-hidden="true"></canvas>
-<div class="scroll-progress" id="scrollProgress"></div>
-<a href="#main" class="skip-link">Skip to content</a>
- 
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#home" class="logo glitch" data-text="AS">AS</a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#journey">Journey</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+
+<div class="app">
+
+  <!-- ===== Side rail ===== -->
+  <aside class="rail">
+    <div class="rail-brand">
+      <span class="rail-mark">R</span>
+      <div class="rail-title">
+        <strong>DEVBHOOMI BILL BOOK</strong>
+        <span>Smart GST billing &amp; inventory</span>
+      </div>
+    </div>
+
+    <nav class="rail-nav">
+      <button class="rail-btn is-active" data-view="editor" id="navEditor">New invoice</button>
+      <button class="rail-btn" data-view="history" id="navHistory">History <span id="historyCount" class="rail-count">0</span></button>
+      <button class="rail-btn" data-view="items" id="navItems">Items <span id="itemsCount" class="rail-count">0</span></button>
+      <button class="rail-btn" data-view="parties" id="navParties">Parties <span id="partiesCount" class="rail-count">0</span></button>
+      <button class="rail-btn" data-view="reports" id="navReports">Reports</button>
+      <button class="rail-btn" data-view="send" id="navSend">Send Invoice</button>
+      <button class="rail-btn" data-view="settings" id="navSettings">Your business</button>
     </nav>
-    <div class="nav-actions">
-      <button id="themeToggle" aria-label="Toggle dark and light theme"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <div class="rail-foot">
+      <button id="printBtn" class="rail-print">Print / Save PDF</button>
+      <button id="newBtn" class="rail-ghost">Start blank invoice</button>
     </div>
-  </div>
-</header>
- 
-<main id="main">
- 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div>
-        <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>Available for Help Desk & IT Support roles</span>
-        <h1 class="hero-title glitch" data-text="Ayush Singh">Ayush Singh</h1>
-        <p class="hero-role"><span id="typedRole"></span><span class="cursor-blink" aria-hidden="true">|</span></p>
-        <p class="hero-sub">A BCA graduate from Rishikesh who's happiest untangling a technical problem and explaining the fix in plain English.</p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary magnetic"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Get in touch</a>
-          <!-- Put your résumé PDF next to this HTML file, named exactly Ayush_Singh_Resume.pdf, and this button will work -->
-          <a href="Ayush_Singh_Resume.pdf" class="btn btn-secondary" download><i class="fa-solid fa-download" aria-hidden="true"></i>Download résumé</a>
+  </aside>
+
+  <!-- ===== Editor view ===== -->
+  <main class="view" id="view-editor">
+
+    <section class="panel form-panel">
+      <header class="panel-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <h1>Invoice details</h1>
+            <p>Fill this in — the tax invoice on the right updates as you type.</p>
+          </div>
+          <button type="button" id="blankInvoiceBtn" class="add-row-btn">＋ Blank Invoice</button>
         </div>
+      </header>
+
+      <h2 class="section-label">Invoice</h2>
+      <div class="field-grid">
+        <label class="field"><span>Invoice no.</span><input type="text" id="invNumber"></label>
+        <label class="field"><span>Dated</span><input type="date" id="invDate"></label>
+        <label class="field"><span>Delivery note</span><input type="text" id="deliveryNote"></label>
+        <label class="field"><span>Mode/terms of payment</span><input type="text" id="modeOfPayment" placeholder="e.g. Cash / Credit 15 days"></label>
+        <label class="field"><span>Reference no.</span><input type="text" id="referenceNo"></label>
+        <label class="field"><span>Reference date</span><input type="date" id="referenceDate"></label>
+        <label class="field"><span>Other references</span><input type="text" id="otherReferences"></label>
+        <label class="field"><span>Buyer's order no.</span><input type="text" id="buyersOrderNo"></label>
+        <label class="field"><span>Order dated</span><input type="date" id="buyersOrderDate"></label>
+        <label class="field"><span>Dispatch doc no.</span><input type="text" id="dispatchDocNo"></label>
+        <label class="field"><span>Delivery note date</span><input type="date" id="deliveryNoteDate"></label>
+        <label class="field"><span>Dispatched through</span><input type="text" id="dispatchedThrough"></label>
+        <label class="field"><span>Destination</span><input type="text" id="destination"></label>
+        <label class="field field-wide"><span>Terms of delivery</span><input type="text" id="termsOfDelivery"></label>
       </div>
-      <svg class="hero-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="90" y="80" width="220" height="160" rx="14" fill="none" stroke="var(--accent-2)" stroke-width="3"/>
-        <rect x="170" y="240" width="60" height="18" fill="none" stroke="var(--accent-2)" stroke-width="3"/>
-        <line x1="150" y1="258" x2="250" y2="258" stroke="var(--accent-2)" stroke-width="3"/>
-        <rect x="112" y="102" width="176" height="14" rx="7" fill="var(--surface-2)"/>
-        <rect x="112" y="126" width="130" height="14" rx="7" fill="var(--surface-2)"/>
-        <rect x="112" y="150" width="150" height="14" rx="7" fill="var(--surface-2)"/>
-        <circle cx="270" cy="185" r="14" fill="none" stroke="var(--accent)" stroke-width="3"/>
-        <path d="M264 185 l4 5 l9 -10" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M120 100 a80 80 0 0 1 160 0" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/>
-        <rect x="104" y="96" width="20" height="34" rx="10" fill="var(--accent)"/>
-        <rect x="276" y="96" width="20" height="34" rx="10" fill="var(--accent)"/>
-        <path d="M296 122 q20 10 14 40" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="308" cy="164" r="4" fill="var(--accent)"/>
-        <circle cx="320" cy="70" r="22" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-        <path d="M311 70 l6 6 l12 -14" fill="none" stroke="#4CAF6D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="60" cy="60" r="3" fill="var(--accent-2)" opacity="0.5"/>
-        <circle cx="340" cy="300" r="3" fill="var(--accent-2)" opacity="0.5"/>
-        <circle cx="70" cy="320" r="3" fill="var(--accent)" opacity="0.5"/>
-      </svg>
-    </div>
-    <a href="#about" class="scroll-cue" aria-label="Scroll to content"></a>
+
+      <h2 class="section-label">
+        Buyer (bill to)
+        <span class="inline-actions">
+          <select id="partyPicker" class="mini-select"><option value="">Load saved party…</option></select>
+          <button type="button" id="savePartyBtn" class="mini-btn">Save as party</button>
+        </span>
+      </h2>
+      <div class="field-grid">
+        <label class="field field-wide"><span>Name</span><input type="text" id="custName" placeholder="Customer / business name" list="partiesDatalist"></label>
+        <label class="field field-wide"><span>Address</span><textarea id="custAddress" rows="2" placeholder="Address"></textarea></label>
+        <label class="field"><span>GSTIN/UIN</span><input type="text" id="custGstin"></label>
+        <label class="field"><span>State name</span><input type="text" id="custState" placeholder="e.g. Uttarakhand"></label>
+        <label class="field"><span>State code</span><input type="text" id="custStateCode" placeholder="e.g. 05"></label>
+        <label class="field"><span>Contact</span><input type="text" id="custContact"></label>
+      </div>
+
+      <h2 class="section-label">
+        Consignee (ship to)
+        <label class="inline-check"><input type="checkbox" id="shipSameAsBuyer" checked> Same as buyer</label>
+      </h2>
+      <div class="field-grid" id="shipFields">
+        <label class="field field-wide"><span>Name</span><input type="text" id="shipName"></label>
+        <label class="field field-wide"><span>Address</span><textarea id="shipAddress" rows="2"></textarea></label>
+        <label class="field"><span>GSTIN/UIN</span><input type="text" id="shipGstin"></label>
+        <label class="field"><span>State name</span><input type="text" id="shipState"></label>
+        <label class="field"><span>State code</span><input type="text" id="shipStateCode"></label>
+        <label class="field"><span>Contact</span><input type="text" id="shipContact"></label>
+      </div>
+
+      <h2 class="section-label">Items</h2>
+      <div class="table-wrap">
+        <table class="items-table" id="itemsTable">
+          <thead>
+            <tr>
+              <th class="col-id">Product ID</th>
+              <th class="col-desc">Description</th>
+              <th class="col-hsn">HSN/SAC</th>
+              <th class="col-qty">Qty</th>
+              <th class="col-unit">Per</th>
+              <th class="col-rate">Rate (₹)</th>
+              <th class="col-disc">Disc %</th>
+              <th class="col-gst">GST %</th>
+              <th class="col-amt">Amount</th>
+              <th class="col-del"></th>
+            </tr>
+          </thead>
+          <tbody id="itemsBody"></tbody>
+        </table>
+      </div>
+      <button id="addItemBtn" class="add-row-btn">+ Add item</button>
+      <button id="submitInvoiceBtn" class="submit-invoice-btn">✓ Submit Invoice &amp; Deduct Stock</button>
+
+      <h2 class="section-label">Bank details &amp; declaration</h2>
+      <div class="field-grid">
+        <label class="field"><span>Bank name</span><input type="text" id="bankName" placeholder="e.g. Axis Bank"></label>
+        <label class="field"><span>Account no.</span><input type="text" id="bankAccount"></label>
+        <label class="field"><span>Branch &amp; IFS code</span><input type="text" id="bankBranchIfsc"></label>
+        <label class="field"><span>Round off total</span>
+          <select id="roundOff"><option value="yes">Yes</option><option value="no">No</option></select>
+        </label>
+        <label class="field field-wide"><span>Declaration</span>
+          <textarea id="declaration" rows="4"></textarea>
+        </label>
+      </div>
+    </section>
+
+    <!-- ===== Live invoice preview ===== -->
+    <section class="panel preview-panel">
+      <div class="pdf-page-actions">
+        <button type="button" id="downloadPdfBtn" class="pdf-download-btn">Download PDF</button>
+        <button type="button" id="downloadPptBtn" class="ppt-download-btn">Invoice to WPS PowerPoint</button>
+      </div>
+      <div class="paper" id="invoicePaper">
+
+        <div class="inv-title">Tax Invoice</div>
+
+        <table class="doc-table head-table">
+          <tr>
+            <td class="cell-seller" rowspan="2">
+              <div class="seller-name" id="pBizName">Your Business Name</div>
+              <div class="seller-line" id="pBizAddress">Business address</div>
+              <div class="seller-line"><span>GSTIN/UIN: </span><span id="pBizGstin">—</span></div>
+              <div class="seller-line"><span>State Name: </span><span id="pBizState">—</span><span>, Code: </span><span id="pBizStateCode">—</span></div>
+              <div class="seller-line"><span>Contact: </span><span id="pBizContact">—</span></div>
+              <div class="seller-line"><span>E-Mail: </span><span id="pBizEmail">—</span></div>
+            </td>
+            <td class="cell-label">Invoice No.<br><strong id="pInvNumber">—</strong></td>
+            <td class="cell-label">Dated<br><strong id="pInvDate">—</strong></td>
+          </tr>
+          <tr>
+            <td class="cell-label">Delivery Note<br><strong id="pDeliveryNote">—</strong></td>
+            <td class="cell-label">Mode/Terms of Payment<br><strong id="pModeOfPayment">—</strong></td>
+          </tr>
+          <tr>
+            <td class="cell-label">Reference No. &amp; Date<br><strong id="pReferenceNo">—</strong></td>
+            <td class="cell-label">Other References<br><strong id="pOtherReferences">—</strong></td>
+            <td class="cell-label" rowspan="2">Buyer's Order No.<br><strong id="pBuyersOrderNo">—</strong>
+              <div class="cell-sub">Dated<br><strong id="pBuyersOrderDate">—</strong></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cell-label">Dispatch Doc No.<br><strong id="pDispatchDocNo">—</strong></td>
+            <td class="cell-label">Delivery Note Date<br><strong id="pDeliveryNoteDate">—</strong></td>
+          </tr>
+          <tr>
+            <td class="cell-label">Dispatched through<br><strong id="pDispatchedThrough">—</strong></td>
+            <td class="cell-label">Destination<br><strong id="pDestination">—</strong></td>
+            <td class="cell-label">Terms of Delivery</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="cell-terms" id="pTermsOfDelivery">—</td>
+          </tr>
+        </table>
+
+        <table class="doc-table party-table">
+          <tr>
+            <td class="cell-party">
+              <span class="strip-label">Buyer (Bill to)</span>
+              <strong id="pCustName">—</strong>
+              <div id="pCustAddress"></div>
+              <div><span>GSTIN/UIN: </span><span id="pCustGstin">—</span></div>
+              <div><span>State Name: </span><span id="pCustState">—</span><span>, Code: </span><span id="pCustStateCode">—</span></div>
+              <div><span>Contact: </span><span id="pCustContact">—</span></div>
+            </td>
+            <td class="cell-party">
+              <span class="strip-label">Consignee (Ship to)</span>
+              <strong id="pShipName">—</strong>
+              <div id="pShipAddress"></div>
+              <div><span>GSTIN/UIN: </span><span id="pShipGstin">—</span></div>
+              <div><span>State Name: </span><span id="pShipState">—</span><span>, Code: </span><span id="pShipStateCode">—</span></div>
+              <div><span>Contact: </span><span id="pShipContact">—</span></div>
+            </td>
+          </tr>
+        </table>
+
+        <table class="doc-table items-doc-table">
+          <thead>
+            <tr>
+              <th class="col-sl">Sl</th>
+              <th class="col-desc">Description of Goods</th>
+              <th class="col-hsn">HSN/SAC</th>
+              <th class="col-qty">Quantity</th>
+              <th class="col-rate">Rate</th>
+              <th class="col-unit">per</th>
+              <th class="col-disc">Disc %</th>
+              <th class="col-amt">Amount</th>
+            </tr>
+          </thead>
+          <tbody id="paperBody"></tbody>
+          <tfoot>
+            <tr id="rowCgst" class="tax-line"><td colspan="7" class="tax-label">OUTPUT CGST @<span id="cgstRateLabel">9</span>%</td><td class="col-amt" id="tCgst">0.00</td></tr>
+            <tr id="rowSgst" class="tax-line"><td colspan="7" class="tax-label">OUTPUT SGST @<span id="sgstRateLabel">9</span>%</td><td class="col-amt" id="tSgst">0.00</td></tr>
+            <tr id="rowIgst" class="tax-line"><td colspan="7" class="tax-label">OUTPUT IGST @<span id="igstRateLabel">18</span>%</td><td class="col-amt" id="tIgst">0.00</td></tr>
+            <tr id="rowRound" class="tax-line"><td colspan="7" class="tax-label">ROUND OFF</td><td class="col-amt" id="tRound">0.00</td></tr>
+            <tr class="total-line">
+              <td colspan="3" class="cell-total-label">Total</td>
+              <td class="col-qty" id="tTotalQty">0</td>
+              <td colspan="3"></td>
+              <td class="col-amt" id="tGrand">₹0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <table class="doc-table words-table">
+          <tr>
+            <td>
+              <span class="strip-label">Amount Chargeable (in words)</span>
+              <strong id="pAmountWords">INR Zero Only</strong>
+            </td>
+            <td class="cell-eoe">E. &amp; O.E</td>
+          </tr>
+        </table>
+
+        <table class="doc-table hsn-table">
+          <thead>
+            <tr>
+              <th rowspan="2" class="col-hsn">HSN/SAC</th>
+              <th rowspan="2" class="col-taxable">Taxable&nbsp;Value</th>
+              <th colspan="2" id="hsnCgstHead">CGST</th>
+              <th colspan="2" id="hsnSgstHead">SGST/UTGST</th>
+              <th rowspan="2" class="col-totaltax">Total&nbsp;Tax&nbsp;Amount</th>
+            </tr>
+            <tr>
+              <th class="col-rate">Rate</th><th class="col-amt">Amount</th>
+              <th class="col-rate">Rate</th><th class="col-amt">Amount</th>
+            </tr>
+          </thead>
+          <tbody id="hsnBody"></tbody>
+          <tfoot>
+            <tr class="total-line">
+              <td class="cell-total-label">Total</td>
+              <td class="col-taxable" id="hTotalTaxable">0.00</td>
+              <td></td><td class="col-amt" id="hTotalCgst">0.00</td>
+              <td></td><td class="col-amt" id="hTotalSgst">0.00</td>
+              <td class="col-totaltax" id="hTotalTax">0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <table class="doc-table words-table">
+          <tr>
+            <td>
+              <span class="strip-label">Tax Amount (in words)</span>
+              <strong id="pTaxWords">INR Zero Only</strong>
+            </td>
+          </tr>
+        </table>
+
+        <table class="doc-table foot-table">
+          <tr>
+            <td class="cell-decl">
+              <span class="strip-label">Declaration</span>
+              <div id="pDeclaration"></div>
+            </td>
+            <td class="cell-bank">
+              <span class="strip-label">Company's Bank Details</span>
+              <div><span>Bank Name: </span><span id="pBankName">—</span></div>
+              <div><span>A/c No.: </span><span id="pBankAccount">—</span></div>
+              <div><span>Branch &amp; IFS Code: </span><span id="pBankBranchIfsc">—</span></div>
+              <div class="sign-block">
+                <span>for <strong id="pBizNameSign">Your Business Name</strong></span>
+                <div class="sign-line">Authorised Signatory</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <div class="paper-computer-note">This is a Computer Generated Invoice</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== History view ===== -->
+  <section class="view is-hidden" id="view-history">
+    <header class="panel-head">
+      <h1>Saved invoices</h1>
+      <p>Invoices you've saved on this device.</p>
+    </header>
+    <div id="historyList" class="history-list"></div>
   </section>
- 
-  <!-- ============ MARQUEE ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Help Desk Support</span><span class="dot">◆</span>
-      <span>Technical Support</span><span class="dot">◆</span>
-      <span>Troubleshooting</span><span class="dot">◆</span>
-      <span>Networking</span><span class="dot">◆</span>
-      <span>Active Directory</span><span class="dot">◆</span>
-      <span>Customer Service</span><span class="dot">◆</span>
-      <span>Ticketing Systems</span><span class="dot">◆</span>
-      <span>Remote Support</span><span class="dot">◆</span>
-      <span>HTML</span><span class="dot">◆</span>
-      <span>CSS</span><span class="dot">◆</span>
-      <span>JavaScript</span><span class="dot">◆</span>
-      <span>Problem Solving</span><span class="dot">◆</span>
-      <!-- duplicate for a seamless loop -->
-      <span>Help Desk Support</span><span class="dot">◆</span>
-      <span>Technical Support</span><span class="dot">◆</span>
-      <span>Troubleshooting</span><span class="dot">◆</span>
-      <span>Networking</span><span class="dot">◆</span>
-      <span>Active Directory</span><span class="dot">◆</span>
-      <span>Customer Service</span><span class="dot">◆</span>
-      <span>Ticketing Systems</span><span class="dot">◆</span>
-      <span>Remote Support</span><span class="dot">◆</span>
-      <span>HTML</span><span class="dot">◆</span>
-      <span>CSS</span><span class="dot">◆</span>
-      <span>JavaScript</span><span class="dot">◆</span>
-      <span>Problem Solving</span><span class="dot">◆</span>
+
+  <!-- ===== Send invoice view ===== -->
+  <section class="view is-hidden" id="view-send">
+    <header class="panel-head"><h1>Send Invoice</h1><p>Select a saved invoice, confirm the customer details, then send it directly through WhatsApp.</p></header>
+    <div class="send-card"><div class="send-grid">
+      <label class="field field-wide"><span>Select saved invoice</span><select id="sendInvoiceSelect"><option value="">Select an invoice...</option></select></label>
+      <label class="field"><span>Customer name</span><input type="text" id="sendCustomerName" placeholder="Customer name"></label>
+      <label class="field"><span>WhatsApp / mobile number</span><input type="tel" id="sendCustomerPhone" placeholder="10-digit mobile number"></label>
+      <label class="field field-wide"><span>Customer address (optional)</span><textarea id="sendCustomerAddress" rows="2"></textarea></label>
+      <label class="field field-wide"><span>Message</span><textarea id="sendMessage" rows="7" placeholder="Your invoice message will appear here..."></textarea></label>
+    </div><div class="send-actions"><button id="sendWhatsAppBtn" class="whatsapp-btn">Send on WhatsApp</button><button id="sendPdfBtn" class="send-pdf-btn">Download Invoice PDF</button><span id="sendStatus" class="send-status"></span></div></div>
+  </section>
+
+  <!-- ===== Settings view ===== -->
+  <section class="view is-hidden" id="view-settings">
+    <header class="panel-head">
+      <h1>Your business</h1>
+      <p>Saved on this device and filled in automatically on every new invoice.</p>
+    </header>
+    <div class="field-grid settings-grid">
+      <label class="field field-wide"><span>Business name</span><input type="text" id="bizName"></label>
+      <label class="field field-wide"><span>Address</span><textarea id="bizAddress" rows="2"></textarea></label>
+      <label class="field"><span>GSTIN/UIN</span><input type="text" id="bizGstin"></label>
+      <label class="field"><span>State name</span><input type="text" id="bizState"></label>
+      <label class="field"><span>State code</span><input type="text" id="bizStateCode" placeholder="e.g. 05"></label>
+      <label class="field"><span>Contact</span><input type="text" id="bizContact"></label>
+      <label class="field field-wide"><span>E-mail</span><input type="text" id="bizEmail"></label>
     </div>
-  </div>
- 
-  <!-- ============ ABOUT ============ -->
-  <section id="about">
-    <i class="fa-solid fa-user-gear section-bg-icon" aria-hidden="true" data-speed="0.08"></i>
-    <div class="section-inner reveal">
-      <h2>About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I finished my BCA at Graphic Era (Deemed to be) University and I'm currently working through a distance MCA at the same university. During my undergrad I spent real time building front-end interfaces with HTML, CSS and JavaScript — it's taken a back seat for the last year and a half, but it left me comfortable with how software and systems actually work, which comes in handy on a help desk.</p>
-          <p>Outside class, I ran social media for my department's DCA cell and led three of my college's technical clubs — ACM, Traversal and TBI. Mostly that meant explaining technical things to people who weren't technical, keeping teams coordinated, and staying calm when a deadline was close. Good practice for a support role.</p>
-        </div>
-        <div class="about-visual"><div class="monogram">AS</div></div>
-      </div>
-      <div class="stats-row">
-        <div class="stat"><span class="stat-num">BCA</span><span class="stat-label">Graduate</span></div>
-        <div class="stat"><span class="stat-num">MCA</span><span class="stat-label">In progress</span></div>
-        <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Clubs &amp; teams led</span></div>
-        <div class="stat"><span class="stat-num">Rishikesh</span><span class="stat-label">Uttarakhand, India</span></div>
-      </div>
-      <div class="terminal">
-        <div class="terminal-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="terminal-title">ayush@support-desk: ~</span></div>
-        <div class="terminal-body">
-          <p><span class="prompt">$</span>whoami</p>
-          <p class="output">ayush_singh — help desk &amp; technical support</p>
-          <p><span class="prompt">$</span>status --check</p>
-          <p class="output success">● systems operational — available for hire</p>
-          <p><span class="prompt">$</span>cat skills.txt</p>
-          <p class="output">troubleshooting, networking, security basics, communication</p>
-        </div>
-      </div>
+
+    <h2 class="section-label">Bank / Account details</h2>
+    <p class="settings-help">These details are saved on this device and automatically appear on every new invoice. You can change them here anytime.</p>
+    <div class="field-grid settings-grid">
+      <label class="field"><span>Bank name</span><input type="text" id="bizBankName" placeholder="e.g. HDFC Bank"></label>
+      <label class="field"><span>Account no.</span><input type="text" id="bizBankAccount" placeholder="Account number"></label>
+      <label class="field field-wide"><span>Branch &amp; IFSC code</span><input type="text" id="bizBankBranchIfsc" placeholder="Branch name / IFSC"></label>
+    </div>
+    <button id="saveBizBtn" class="add-row-btn">Save business details</button>
+    <span id="bizSavedNote" class="saved-note"></span>
+
+    <h2 class="section-label">Danger zone</h2>
+    <p class="danger-note">This clears every invoice, saved item, party, and business detail stored on this device. This cannot be undone.</p>
+    <button id="resetAllBtn" class="danger-btn">Reset all data</button>
+  </section>
+
+  <!-- ===== Items master ===== -->
+  <section class="view is-hidden" id="view-items">
+    <header class="panel-head">
+      <h1>Item catalog</h1>
+      <p>Saved items autocomplete in the invoice — pick one and HSN/rate/GST fill in automatically. Stock reduces when you save an invoice to history.</p>
+    </header>
+    <div class="master-toolbar">
+      <button id="addItemMasterBtn" class="add-row-btn">+ Add item</button>
+      <button id="saveItemsCatalogBtn" class="add-row-btn">💾 Save item catalog</button>
+      <button id="linkExcelBtn" class="add-row-btn">🔗 Link Excel File</button>
+      <button id="syncExcelBtn" class="add-row-btn">⟳ Sync to Excel</button>
+      <button id="importItemsBtn" class="add-row-btn">📥 Import Excel / WPS</button>
+      <button id="exportItemsBtn" class="add-row-btn">📤 Download Excel / WPS</button>
+      <button id="exportInventoryPptBtn" class="add-row-btn">Export WPS PowerPoint</button>
+      <input type="file" id="importItemsFile" accept=".xlsx,.xls,.csv" class="is-hidden">
+    </div>
+    <div id="itemsCatalogSavedNote" style="margin:8px 0 6px;color:#64748b;font-size:13px;">Product data is saved on this device. Link one Excel file once; after permission is granted, website changes will update the same Excel file automatically.</div>
+    <div id="excelLinkStatus" style="margin:0 0 14px;color:#64748b;font-size:13px;"></div>
+    <div class="table-wrap">
+      <table class="master-table" id="itemsMasterTable">
+        <thead>
+          <tr>
+            <th>Product ID</th><th>Description</th><th>HSN/SAC</th><th>Unit</th><th>Cost Price (₹)</th><th>Sale Price (₹)</th><th>GST %</th><th>Purchase Qty</th><th>Sold Qty</th><th>Current Stock</th><th>Track stock</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="itemsMasterBody"></tbody>
+      </table>
     </div>
   </section>
- 
-  <!-- ============ SKILLS ============ -->
-  <section id="skills">
-    <i class="fa-solid fa-microchip section-bg-icon" aria-hidden="true" data-speed="0.1"></i>
-    <div class="section-inner">
-      <h2>Skills</h2>
-      <div class="skill-groups">
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
-          <h3>Support &amp; troubleshooting</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Windows troubleshooting</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>macOS &amp; Linux basics</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Hardware diagnostics</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Software install &amp; config</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Remote desktop support</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Ticketing &amp; escalation</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Incident documentation</span>
-          </div>
-        </div>
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
-          <h3>Networking basics</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>TCP/IP fundamentals</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>DNS &amp; DHCP</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>LAN/WAN &amp; Wi-Fi setup</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>VPN basics</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Router/switch basics</span>
-          </div>
-        </div>
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
-          <h3>Tools &amp; platforms</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>MS Office 365</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Google Workspace</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Active Directory basics</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Windows Server basics</span>
-          </div>
-        </div>
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-          <h3>Security &amp; data basics</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Password &amp; access hygiene</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Phishing awareness</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Antivirus &amp; endpoint basics</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Backup &amp; recovery concepts</span>
-          </div>
-        </div>
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-          <h3>Web fundamentals</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML</span>
-            <span class="pill"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i>CSS</span>
-            <span class="pill"><i class="fa-brands fa-js" aria-hidden="true"></i>JavaScript</span>
-          </div>
-        </div>
- 
-        <div class="skill-card tilt reveal-scale">
-          <div class="skill-icon-badge"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
-          <h3>Working with people</h3>
-          <div class="pill-row">
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Clear communication</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Active listening</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Customer service</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Team leadership</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Problem-solving</span>
-            <span class="pill"><i class="fa-solid fa-check" aria-hidden="true"></i>Time management</span>
-          </div>
-        </div>
- 
-      </div>
+
+  <!-- ===== Parties master ===== -->
+  <section class="view is-hidden" id="view-parties">
+    <header class="panel-head">
+      <h1>Parties</h1>
+      <p>Saved buyers you can load onto any invoice with one click.</p>
+    </header>
+    <div class="master-toolbar">
+      <button id="addPartyMasterBtn" class="add-row-btn">+ Add party</button>
+      <button id="importPartiesBtn" class="add-row-btn">Import from Excel</button>
+      <button id="exportPartiesBtn" class="add-row-btn">Export to Excel</button>
+      <input type="file" id="importPartiesFile" accept=".xlsx,.xls,.csv" class="is-hidden">
+    </div>
+    <div class="table-wrap">
+      <table class="master-table" id="partiesMasterTable">
+        <thead>
+          <tr><th>Name</th><th>Address</th><th>GSTIN</th><th>State</th><th>Code</th><th>Contact</th><th></th></tr>
+        </thead>
+        <tbody id="partiesMasterBody"></tbody>
+      </table>
     </div>
   </section>
- 
-  <!-- ============ JOURNEY ============ -->
-  <section id="journey">
-    <i class="fa-solid fa-route section-bg-icon" aria-hidden="true" data-speed="0.09"></i>
-    <div class="section-inner">
-      <h2>Journey</h2>
-      <div class="timeline">
-        <div class="timeline-line-bg"></div>
-        <div class="timeline-line-fill" id="timelineFill"></div>
- 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Completed</span>
-            <h3>Class 12 (10+2) — Army Public School, Raiwala</h3>
-            <p>Completed senior secondary education.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Completed</span>
-            <h3>BCA — Graphic Era (Deemed to be) University</h3>
-            <p>Built a foundation in programming, databases and web development, including hands-on front-end work with HTML, CSS and JavaScript.</p>
-            <span class="timeline-extra"><i class="fa-solid fa-users" aria-hidden="true"></i>Leadership &amp; activities alongside the degree</span>
-            <ul>
-              <li>Social Media Head, DCA Department</li>
-              <li>Team Lead &amp; Social Media Head, ACM</li>
-              <li>Team Lead &amp; Social Media Head, Traversal</li>
-              <li>Team Lead &amp; Social Media Head, TBI</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>In progress</span>
-            <h3>MCA (Distance) — Graphic Era (Deemed to be) University</h3>
-            <p>Currently building on the BCA foundation while job-hunting — balancing coursework with the search for the right support role.</p>
-          </div>
-        </div>
-      </div>
+
+  <!-- ===== Reports ===== -->
+  <section class="view is-hidden" id="view-reports">
+    <header class="panel-head">
+      <h1>Reports</h1>
+      <p>Totals across every invoice you've saved to history on this device.</p>
+    </header>
+    <div class="report-cards" id="reportCards"></div>
+    <div class="master-toolbar">
+      <button id="exportRegisterBtn" class="add-row-btn">Export sales register to Excel / WPS</button>
+      <button id="exportReportsPptBtn" class="add-row-btn">Export full report to WPS PowerPoint</button>
+    </div>
+    <div class="table-wrap">
+      <table class="master-table" id="registerTable">
+        <thead>
+          <tr><th>Date</th><th>Invoice No.</th><th>Party</th><th>Taxable</th><th>CGST</th><th>SGST</th><th>IGST</th><th>Total</th></tr>
+        </thead>
+        <tbody id="registerBody"></tbody>
+        <tfoot id="registerFoot"></tfoot>
+      </table>
     </div>
   </section>
- 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects">
-    <i class="fa-solid fa-laptop-code section-bg-icon" aria-hidden="true" data-speed="0.08"></i>
-    <div class="section-inner">
-      <h2>Projects</h2>
-      <div class="project-list stagger">
-        <div class="project-card tilt reveal">
-          <h3>This portfolio</h3>
-          <p>Built from scratch with HTML, CSS and vanilla JavaScript — the layout, the animations and the small interactions throughout the page. A chance to get back into front-end after a year and a half away from it.</p>
-          <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        </div>
-        <div class="project-card empty tilt reveal">
-          <i class="fa-solid fa-plus" aria-hidden="true"></i>
-          <h3>Add a project</h3>
-          <p>A college assignment, a personal build — anything that shows how you approach a problem.</p>
-        </div>
-        <div class="project-card empty tilt reveal">
-          <i class="fa-solid fa-plus" aria-hidden="true"></i>
-          <h3>Add another</h3>
-          <p>Two or three real projects say more than a long list of skills ever will.</p>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact">
-    <i class="fa-solid fa-tower-broadcast section-bg-icon" aria-hidden="true" data-speed="0.09"></i>
-    <div class="section-inner reveal">
-      <h2>Get in touch</h2>
-      <p class="contact-intro">I'm actively looking for help desk and technical support roles, and open to relocating to Delhi NCR — Noida and Gurgaon included.</p>
-      <div class="contact-grid">
-        <div>
-          <a href="mailto:ayush.graphicera@gmail.com" class="contact-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i>ayush.graphicera@gmail.com</a>
-          <a href="tel:+917906328346" class="contact-link"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 79063 28346</a>
-          <div class="contact-link"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rishikesh, Uttarakhand, India</div>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit" class="btn btn-primary magnetic"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Send via email</button>
-          <span class="form-hint">This opens your email app with the message ready to send.</span>
-        </form>
-      </div>
-    </div>
-  </section>
- 
-</main>
- 
-<footer class="footer"><p>© <span id="year"></span> Ayush Singh. Built with HTML, CSS &amp; JavaScript.</p></footer>
-<button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
- 
+
+</div>
+
+<datalist id="itemsDatalist"></datalist>
+<datalist id="partiesDatalist"></datalist>
+
+<template id="itemRowTemplate">
+  <tr class="item-row">
+    <td class="col-id"><input type="text" class="i-product-id" placeholder="e.g. DB-001"></td>
+    <td class="col-desc"><input type="text" class="i-desc" placeholder="Item or service" list="itemsDatalist"></td>
+    <td class="col-hsn"><input type="text" class="i-hsn" placeholder="0000"></td>
+    <td class="col-qty"><input type="number" class="i-qty" value="1" min="0" step="1"></td>
+    <td class="col-unit"><input type="text" class="i-unit" value="PCS"></td>
+    <td class="col-rate"><input type="number" class="i-rate" value="0" min="0" step="0.01"></td>
+    <td class="col-disc"><input type="number" class="i-disc" value="0" min="0" max="100" step="0.1"></td>
+    <td class="col-gst">
+      <select class="i-gst">
+        <option value="0">0%</option>
+        <option value="5">5%</option>
+        <option value="12">12%</option>
+        <option value="18" selected>18%</option>
+        <option value="28">28%</option>
+      </select>
+    </td>
+    <td class="col-amt i-amt">₹0.00</td>
+    <td class="col-del"><button type="button" class="i-del" title="Remove item">×</button></td>
+  </tr>
+</template>
+
 <script>
-var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
- 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('year').textContent = new Date().getFullYear();
-  initMobileNav();
-  initScrollEffects();
-  initActiveNavOnScroll();
-  initRevealOnScroll();
-  initTypingEffect();
-  initTheme();
-  initContactForm();
-  initBackgroundParticles();
-  initCustomCursor();
-  initTilt();
-  initRipple();
-  initMagnetic();
-  initCounters();
-  initSectionParallax();
-  initTimelineFill();
-});
- 
-/* ============ MOBILE NAV ============ */
-function initMobileNav() {
-  var navToggle = document.getElementById('navToggle');
-  var navLinksEl = document.getElementById('navLinks');
-  navToggle.addEventListener('click', function () {
-    var isOpen = navLinksEl.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  navLinksEl.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navLinksEl.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
- 
-/* ============ NAVBAR BG + SCROLL PROGRESS + BACK-TO-TOP ============ */
-function initScrollEffects() {
-  var navHeader = document.getElementById('nav');
-  var backToTopBtn = document.getElementById('backToTop');
-  var progressBar = document.getElementById('scrollProgress');
-  function onScroll() {
-    var scrollTop = window.scrollY;
-    navHeader.classList.toggle('scrolled', scrollTop > 40);
-    backToTopBtn.classList.toggle('visible', scrollTop > 600);
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+(function () {
+  "use strict";
+
+  const LS_BUSINESS = "gstbill.business";
+  const LS_HISTORY = "gstbill.history";
+  const LS_DRAFT = "gstbill.draft";
+  const LS_ITEMS = "gstbill.items";
+  const LS_PARTIES = "gstbill.parties";
+  const DB_EXCEL = "devbhoomi.billbook.excel";
+  const DB_EXCEL_STORE = "handles";
+  const DB_EXCEL_KEY = "main";
+  let linkedExcelHandle = null;
+  let linkedExcelTimer = null;
+  let linkedExcelBusy = false;
+
+
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => (Number(n) || 0).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const todayISO = () => new Date().toISOString().slice(0, 10);
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+
+  function formatDate(iso) {
+    if (!iso) return "—";
+    const d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "2-digit" });
   }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
-  backToTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-}
- 
-/* ============ ACTIVE NAV LINK WHILE SCROLLING ============ */
-function initActiveNavOnScroll() {
-  var sections = document.querySelectorAll('main section[id]');
-  var navAnchors = document.querySelectorAll('.nav-links a');
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var id = entry.target.getAttribute('id');
-        navAnchors.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + id); });
-      }
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  sections.forEach(function (s) { observer.observe(s); });
-}
- 
-/* ============ SCROLL REVEAL (plain + scale variant) ============ */
-function initRevealOnScroll() {
-  var revealEls = document.querySelectorAll('.reveal, .reveal-scale');
-  if (prefersReducedMotion) { revealEls.forEach(function (el) { el.classList.add('in-view'); }); return; }
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) { entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target); }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(function (el) { revealObserver.observe(el); });
-}
- 
-/* ============ TYPING EFFECT (cycles through role-title variants) ============ */
-function initTypingEffect() {
-  var typedEl = document.getElementById('typedRole');
-  var roles = [
-    'Help Desk Support', 'Technical Support Executive', 'IT Support Specialist',
-    'Desktop Support Analyst', 'Service Desk Analyst', 'Customer Support Engineer',
-    'IT Helpdesk Associate', 'Problem Solver'
-  ];
-  if (prefersReducedMotion) { typedEl.textContent = roles[0]; return; }
-  var roleIndex = 0, charIndex = 0, isDeleting = false;
-  function typeLoop() {
-    var current = roles[roleIndex];
-    charIndex += isDeleting ? -1 : 1;
-    typedEl.textContent = current.substring(0, charIndex);
-    var delay = isDeleting ? 40 : 85;
-    if (!isDeleting && charIndex === current.length) { delay = 1400; isDeleting = true; }
-    else if (isDeleting && charIndex === 0) { isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; delay = 250; }
-    setTimeout(typeLoop, delay);
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str || "";
+    return div.innerHTML;
   }
-  typeLoop();
-}
- 
-/* ============ THEME TOGGLE ============ */
-function initTheme() {
-  var themeToggleBtn = document.getElementById('themeToggle');
-  function updateThemeIcon(theme) {
-    var icon = document.querySelector('#themeToggle i');
-    if (icon) icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+  function round2(x) { return Math.round((x + Number.EPSILON) * 100) / 100; }
+
+  /* ---------------------------------------------------------
+     Number to words
+  --------------------------------------------------------- */
+  const ONES = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+    "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+  const TENS = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+  function twoDigits(n) { if (n < 20) return ONES[n]; return TENS[Math.floor(n / 10)] + (n % 10 ? " " + ONES[n % 10] : ""); }
+  function threeDigits(n) { if (n < 100) return twoDigits(n); return ONES[Math.floor(n / 100)] + " Hundred" + (n % 100 ? " " + twoDigits(n % 100) : ""); }
+  function intToWords(n) {
+    n = Math.round(n);
+    if (n === 0) return "Zero";
+    const crore = Math.floor(n / 10000000); n %= 10000000;
+    const lakh = Math.floor(n / 100000); n %= 100000;
+    const thousand = Math.floor(n / 1000); n %= 1000;
+    const rest = n;
+    let parts = [];
+    if (crore) parts.push(threeDigits(crore) + " Crore");
+    if (lakh) parts.push(threeDigits(lakh) + " Lakh");
+    if (thousand) parts.push(threeDigits(thousand) + " Thousand");
+    if (rest) parts.push(threeDigits(rest));
+    return parts.join(" ") || "Zero";
   }
-  (function applyStoredTheme() {
+  function amountInWords(amount) {
+    amount = round2(amount);
+    const rupees = Math.floor(amount);
+    const paise = Math.round((amount - rupees) * 100);
+    let words = "INR " + intToWords(rupees);
+    if (paise > 0) words += " and " + intToWords(paise) + " paise";
+    return words + " Only";
+  }
+
+  /* ===========================================================
+     ITEM CATALOG (master)
+  =========================================================== */
+  let itemsMaster = [];
+
+  function normalizeItem(it) {
+    const sold = Number(it.sold ?? it.soldQty ?? 0) || 0;
+    const legacyStock = Number(it.stock ?? 0) || 0;
+    const purchases = Number(it.purchases ?? it.purchaseQty ?? (legacyStock + sold)) || 0;
+    return Object.assign({}, it, {
+      id: it.id || uid(), productId: String(it.productId ?? it.productCode ?? "").trim(), desc: it.desc || "", hsn: it.hsn || "", unit: it.unit || "PCS",
+      costPrice: Number(it.costPrice ?? it.cost ?? 0) || 0,
+      salePrice: Number(it.salePrice ?? it.rate ?? 0) || 0,
+      gst: Number(it.gst ?? 18) || 0,
+      purchases: purchases,
+      sold: sold,
+      stock: round2(purchases - sold),
+      track: it.track !== false
+    });
+  }
+  function loadItemsMaster() {
+    try { itemsMaster = JSON.parse(localStorage.getItem(LS_ITEMS) || "[]").map(normalizeItem); }
+    catch (e) { itemsMaster = []; }
+    localStorage.setItem(LS_ITEMS, JSON.stringify(itemsMaster));
+  }
+  function saveItemsMaster() {
+    itemsMaster = itemsMaster.map(normalizeItem);
+    localStorage.setItem(LS_ITEMS, JSON.stringify(itemsMaster));
+    $("itemsCount").textContent = itemsMaster.length;
+    refreshItemsDatalist();
+    scheduleLinkedExcelSync();
+  }
+  function refreshItemsDatalist() {
+    const dl = $("itemsDatalist");
+    dl.innerHTML = itemsMaster.map((it) => `<option value="${escapeHtml(it.desc)}">${escapeHtml(it.productId || "")}</option>`).join("");
+  }
+  function findItemByProductId(productId) { const key=(productId||"").trim().toLowerCase(); if(!key)return null; return itemsMaster.find(it=>String(it.productId||"").trim().toLowerCase()===key)||null; }
+  function findItemByDesc(desc) { const key=(desc||"").trim().toLowerCase(); if(!key)return null; return itemsMaster.find(it=>it.desc.trim().toLowerCase()===key)||null; }
+  function findCatalogItem(productId, desc) { return findItemByProductId(productId) || findItemByDesc(desc); }
+  function upsertItemMaster(data) {
+    const existing = findItemByDesc(data.desc);
+    if (existing) Object.assign(existing, data);
+    else itemsMaster.push(Object.assign({ id: uid(), productId: "", purchases: 0, sold: 0, stock: 0, track: true, costPrice: 0, salePrice: 0 }, data));
+    saveItemsMaster();
+  }
+  function addItemMasterRow(data) {
+    const row = normalizeItem(Object.assign({ id: uid(), productId: "", desc: "", hsn: "", unit: "PCS", costPrice: 0, salePrice: 0, gst: 18, purchases: 0, sold: 0, track: true }, data || {}));
+    itemsMaster.push(row);
+    saveItemsMaster();
+    renderItemsMasterTable();
+  }
+  function deleteItemMaster(id) {
+    itemsMaster = itemsMaster.filter((it) => it.id !== id);
+    saveItemsMaster();
+    renderItemsMasterTable();
+  }
+  function stockClass(stock) { return stock <= 0 ? "inventory-out" : stock <= 5 ? "inventory-low" : "inventory-good"; }
+  function renderItemsMasterTable() {
+    const body = $("itemsMasterBody");
+    body.innerHTML = "";
+    itemsMaster.forEach((it) => {
+      const tr = document.createElement("tr");
+      const stock = round2((it.purchases || 0) - (it.sold || 0));
+      it.stock = stock;
+      tr.innerHTML = `
+        <td class="product-id-cell"><input type="text" class="m-product-id" value="${escapeHtml(it.productId || "")}" placeholder="DB-001"></td>
+        <td><input type="text" class="m-desc" value="${escapeHtml(it.desc)}"></td>
+        <td><input type="text" class="m-hsn" value="${escapeHtml(it.hsn)}"></td>
+        <td><input type="text" class="m-unit" value="${escapeHtml(it.unit)}"></td>
+        <td><input type="number" class="m-cost" value="${it.costPrice}" step="0.01" min="0"></td>
+        <td><input type="number" class="m-sale" value="${it.salePrice}" step="0.01" min="0"></td>
+        <td><input type="number" class="m-gst" value="${it.gst}" step="0.1" min="0"></td>
+        <td><input type="number" class="m-purchases" value="${it.purchases}" step="1" min="0"></td>
+        <td><input type="number" class="m-sold" value="${it.sold}" step="1" min="0" readonly title="Automatically updated when invoices are saved"></td>
+        <td class="${stockClass(stock)} m-current-stock">${stock}</td>
+        <td style="text-align:center;"><input type="checkbox" class="m-track" ${it.track ? "checked" : ""}></td>
+        <td><button type="button" class="master-row-del" title="Delete">×</button></td>`;
+      const bind = (cls, field, isNum) => {
+        tr.querySelector(cls).addEventListener("input", () => {
+          it[field] = isNum ? (parseFloat(tr.querySelector(cls).value) || 0) : tr.querySelector(cls).value;
+          it.stock = round2((it.purchases || 0) - (it.sold || 0));
+          tr.querySelector(".m-current-stock").textContent = it.stock;
+          tr.querySelector(".m-current-stock").className = "m-current-stock " + stockClass(it.stock);
+          saveItemsMaster();
+        });
+      };
+      bind(".m-product-id", "productId", false); bind(".m-desc", "desc", false); bind(".m-hsn", "hsn", false); bind(".m-unit", "unit", false);
+      bind(".m-cost", "costPrice", true); bind(".m-sale", "salePrice", true); bind(".m-gst", "gst", true); bind(".m-purchases", "purchases", true);
+      tr.querySelector(".m-track").addEventListener("change", () => { it.track = tr.querySelector(".m-track").checked; saveItemsMaster(); });
+      tr.querySelector(".master-row-del").addEventListener("click", () => deleteItemMaster(it.id));
+      body.appendChild(tr);
+    });
+  }
+
+  /* ===========================================================
+     PARTY CATALOG (master)
+  =========================================================== */
+  let partiesMaster = [];
+
+  function loadPartiesMaster() {
+    try { partiesMaster = JSON.parse(localStorage.getItem(LS_PARTIES) || "[]"); }
+    catch (e) { partiesMaster = []; }
+  }
+  function savePartiesMaster() {
+    localStorage.setItem(LS_PARTIES, JSON.stringify(partiesMaster));
+    $("partiesCount").textContent = partiesMaster.length;
+    refreshPartiesDatalist();
+    refreshPartyPicker();
+  }
+  function refreshPartiesDatalist() {
+    const dl = $("partiesDatalist");
+    dl.innerHTML = partiesMaster.map((p) => `<option value="${escapeHtml(p.name)}">`).join("");
+  }
+  function refreshPartyPicker() {
+    const sel = $("partyPicker");
+    const current = sel.value;
+    sel.innerHTML = '<option value="">Load saved party…</option>' +
+      partiesMaster.map((p) => `<option value="${escapeHtml(p.id)}">${escapeHtml(p.name)}</option>`).join("");
+    sel.value = current && partiesMaster.some((p) => p.id === current) ? current : "";
+  }
+  function findPartyByName(name) {
+    const key = (name || "").trim().toLowerCase();
+    if (!key) return null;
+    return partiesMaster.find((p) => p.name.trim().toLowerCase() === key) || null;
+  }
+  function upsertPartyMaster(data) {
+    const existing = findPartyByName(data.name);
+    if (existing) Object.assign(existing, data);
+    else partiesMaster.push(Object.assign({ id: uid() }, data));
+    savePartiesMaster();
+  }
+  function addPartyMasterRow(data) {
+    const row = Object.assign({ id: uid(), name: "", address: "", gstin: "", state: "", stateCode: "", contact: "" }, data || {});
+    partiesMaster.push(row);
+    savePartiesMaster();
+    renderPartiesMasterTable();
+  }
+  function deletePartyMaster(id) {
+    partiesMaster = partiesMaster.filter((p) => p.id !== id);
+    savePartiesMaster();
+    renderPartiesMasterTable();
+  }
+  function renderPartiesMasterTable() {
+    const body = $("partiesMasterBody");
+    body.innerHTML = "";
+    partiesMaster.forEach((p) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><input type="text" class="m-name" value="${escapeHtml(p.name)}"></td>
+        <td><input type="text" class="m-address" value="${escapeHtml(p.address)}"></td>
+        <td><input type="text" class="m-gstin" value="${escapeHtml(p.gstin)}"></td>
+        <td><input type="text" class="m-state" value="${escapeHtml(p.state)}"></td>
+        <td><input type="text" class="m-code" value="${escapeHtml(p.stateCode)}"></td>
+        <td><input type="text" class="m-contact" value="${escapeHtml(p.contact)}"></td>
+        <td><button type="button" class="master-row-del" title="Delete">×</button></td>
+      `;
+      const bind = (cls, field) => tr.querySelector(cls).addEventListener("input", () => {
+        p[field] = tr.querySelector(cls).value;
+        savePartiesMaster();
+      });
+      bind(".m-name", "name"); bind(".m-address", "address"); bind(".m-gstin", "gstin");
+      bind(".m-state", "state"); bind(".m-code", "stateCode"); bind(".m-contact", "contact");
+      tr.querySelector(".master-row-del").addEventListener("click", () => deletePartyMaster(p.id));
+      body.appendChild(tr);
+    });
+  }
+
+  /* ===========================================================
+     LINKED EXCEL WORKBOOK (Chrome / Edge File System Access API)
+     One selected .xlsx file becomes the live workbook for this app.
+  =========================================================== */
+  function excelStatus(text, kind) {
+    const el = $("excelLinkStatus");
+    if (!el) return;
+    el.textContent = text || "";
+    el.className = kind === "good" ? "excel-linked" : kind === "warn" ? "excel-warning" : "";
+  }
+
+  function openExcelHandleDB() {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) return reject(new Error("IndexedDB is not available."));
+      const req = indexedDB.open(DB_EXCEL, 1);
+      req.onupgradeneeded = () => req.result.createObjectStore(DB_EXCEL_STORE);
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error || new Error("Could not open local storage for the Excel link."));
+    });
+  }
+
+  async function storeExcelHandle(handle) {
     try {
-      var stored = localStorage.getItem('theme');
-      if (stored === 'light' || stored === 'dark') {
-        document.documentElement.setAttribute('data-theme', stored);
-        updateThemeIcon(stored);
-        return;
-      }
-    } catch (e) { /* localStorage unavailable */ }
-    updateThemeIcon(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  })();
-  themeToggleBtn.addEventListener('click', function () {
-    var current = document.documentElement.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    var next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    updateThemeIcon(next);
-    try { localStorage.setItem('theme', next); } catch (e) { /* won't persist */ }
-  });
-}
- 
-/* ============ CONTACT FORM ============ */
-function initContactForm() {
-  var contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = contactForm.elements['name'].value.trim();
-    var email = contactForm.elements['email'].value.trim();
-    var message = contactForm.elements['message'].value.trim();
-    var subject = encodeURIComponent('Portfolio contact from ' + name);
-    var body = encodeURIComponent(message + '\n\n\u2014 ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:ayush.graphicera@gmail.com?subject=' + subject + '&body=' + body;
-  });
-}
- 
-/* ============ PERSISTENT PARTICLE BACKGROUND (whole page, reacts to mouse) ============ */
-function initBackgroundParticles() {
-  var canvas = document.getElementById('bgCanvas');
-  if (!canvas || !canvas.getContext) return;
-  var ctx = canvas.getContext('2d');
-  var width, height, particles;
-  var mouse = { x: null, y: null, radius: 130 };
- 
-  function resize() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; createParticles(); }
-  function createParticles() {
-    var count = Math.min(70, Math.floor((width * height) / 15000));
-    particles = [];
-    for (var i = 0; i < count; i++) {
-      particles.push({ x: Math.random() * width, y: Math.random() * height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3 });
-    }
+      const db = await openExcelHandleDB();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(DB_EXCEL_STORE, "readwrite");
+        tx.objectStore(DB_EXCEL_STORE).put(handle, DB_EXCEL_KEY);
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error);
+      });
+      db.close();
+    } catch (e) { /* File handle persistence is optional. */ }
   }
-  function colors() {
-    var style = getComputedStyle(document.documentElement);
-    return { bg: style.getPropertyValue('--bg').trim() || '#10141A', line: style.getPropertyValue('--accent-2').trim() || '#4FBDAE' };
-  }
-  function drawFrame() {
-    var c = colors();
-    ctx.fillStyle = c.bg;
-    ctx.fillRect(0, 0, width, height);
-    particles.forEach(function (p) {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-      if (mouse.x !== null) {
-        var dx = p.x - mouse.x, dy = p.y - mouse.y, dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius && dist > 0.01) { p.x += (dx / dist) * 0.5; p.y += (dy / dist) * 0.5; }
-      }
-    });
-    ctx.strokeStyle = c.line;
-    for (var i = 0; i < particles.length; i++) {
-      for (var j = i + 1; j < particles.length; j++) {
-        var ddx = particles[i].x - particles[j].x, ddy = particles[i].y - particles[j].y;
-        var d = Math.sqrt(ddx * ddx + ddy * ddy);
-        if (d < 110) {
-          ctx.globalAlpha = (1 - d / 110) * 0.22;
-          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke();
+
+  async function restoreExcelHandle() {
+    try {
+      const db = await openExcelHandleDB();
+      const handle = await new Promise((resolve, reject) => {
+        const tx = db.transaction(DB_EXCEL_STORE, "readonly");
+        const req = tx.objectStore(DB_EXCEL_STORE).get(DB_EXCEL_KEY);
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = () => reject(req.error);
+      });
+      db.close();
+      linkedExcelHandle = handle;
+      if (handle) {
+        // Do not ask for permission here: browsers only allow a permission
+        // prompt from a user gesture. If permission is already persisted,
+        // the file can continue updating without asking the user again.
+        let state = "prompt";
+        try {
+          if (typeof handle.queryPermission === "function") {
+            state = await handle.queryPermission({ mode: "readwrite" });
+          }
+        } catch (_) {}
+        if (state === "granted") {
+          excelStatus(`✓ Linked Excel: ${handle.name}. Automatic updates are enabled.`, "good");
+          // Catch up once after reopening the app.
+          setTimeout(() => syncLinkedExcelWorkbook(false), 300);
+        } else {
+          excelStatus(`Excel linked: ${handle.name}. One-time access is needed again in this browser session. Click Sync to Excel and Allow — you do NOT need to select the file again.`, "warn");
         }
       }
+      return handle;
+    } catch (e) { return null; }
+  }
+
+  async function hasExcelWritePermission(handle, request) {
+    if (!handle || typeof handle.queryPermission !== "function") return false;
+    const opts = { mode: "readwrite" };
+    const current = await handle.queryPermission(opts);
+    if (current === "granted") return true;
+    if (request && current === "prompt" && typeof handle.requestPermission === "function") {
+      return (await handle.requestPermission(opts)) === "granted";
     }
-    ctx.globalAlpha = 0.5; ctx.fillStyle = c.line;
-    particles.forEach(function (p) { ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2); ctx.fill(); });
-    ctx.globalAlpha = 1;
+    return false;
   }
-  function loop() { drawFrame(); requestAnimationFrame(loop); }
- 
-  window.addEventListener('resize', resize);
-  window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
- 
-  resize();
-  if (prefersReducedMotion) { drawFrame(); } else { loop(); }
-}
- 
-/* ============ SECTION WATERMARK PARALLAX ============ */
-function initSectionParallax() {
-  if (prefersReducedMotion) return;
-  var els = document.querySelectorAll('.section-bg-icon');
-  if (!els.length) return;
-  function onScroll() {
-    els.forEach(function (el) {
-      var speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
-      var rect = el.getBoundingClientRect();
-      var centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
-      el.style.transform = 'translateY(' + (centerOffset * -speed) + 'px) rotate(' + (centerOffset * 0.01) + 'deg)';
+
+  function buildLinkedWorkbook() {
+    const itemRows = itemsMaster.map((it) => ({
+      "Product ID": it.productId || "", Description: it.desc, "HSN/SAC": it.hsn, Unit: it.unit,
+      "Cost Price": it.costPrice || 0, "Sale Price": it.salePrice || 0, "GST%": it.gst || 0,
+      "No. of Purchase": it.purchases || 0, "No. of Sold Items": it.sold || 0,
+      "Current Stock": round2((it.purchases || 0) - (it.sold || 0)), "Track Stock": it.track ? "Yes" : "No"
+    }));
+    const salesRows = readHistory().map((inv) => ({
+      Date: formatDate(inv.invDate), "Invoice No": inv.invNumber, Party: inv.custName,
+      Taxable: inv.taxable || 0, CGST: inv.cgst || 0, SGST: inv.sgst || 0,
+      IGST: inv.igst || 0, Total: inv.grandTotal || 0,
+      "Items / Qty": (inv.items || []).map((x) => `${x.desc} × ${x.qty}`).join(" | ")
+    }));
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(itemRows), "Items");
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(salesRows), "Sales Register");
+    return wb;
+  }
+
+  async function syncLinkedExcelWorkbook(showAlert) {
+    if (!linkedExcelHandle) return false;
+    if (typeof XLSX === "undefined") return false;
+    if (linkedExcelBusy) return false;
+    try {
+      const permitted = await hasExcelWritePermission(linkedExcelHandle, false);
+      if (!permitted) {
+        excelStatus("Excel is linked, but write permission needs to be granted again. Click Sync to Excel.", "warn");
+        return false;
+      }
+      linkedExcelBusy = true;
+      const wb = buildLinkedWorkbook();
+      const bytes = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+      const writable = await linkedExcelHandle.createWritable();
+      await writable.write(new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }));
+      await writable.close();
+      excelStatus(`✓ Excel updated automatically: ${linkedExcelHandle.name} · ${new Date().toLocaleTimeString("en-IN")}`, "good");
+      if (showAlert) alert("Excel file updated successfully.");
+      return true;
+    } catch (e) {
+      excelStatus("Excel update failed. Keep the file accessible and click Sync to Excel.", "warn");
+      if (showAlert) alert("Could not update the linked Excel file. Please click Sync to Excel and allow access again.");
+      return false;
+    } finally { linkedExcelBusy = false; }
+  }
+
+  function scheduleLinkedExcelSync() {
+    if (!linkedExcelHandle) return;
+    clearTimeout(linkedExcelTimer);
+    linkedExcelTimer = setTimeout(() => syncLinkedExcelWorkbook(false), 1200);
+  }
+
+  // Keep the linked workbook current while this page is open, including
+  // changes made by invoice saves and item-catalog edits.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && linkedExcelHandle) {
+      syncLinkedExcelWorkbook(false);
+    }
+  });
+
+  async function linkExcelFile() {
+    if (typeof window.showSaveFilePicker !== "function") {
+      alert("Live Excel linking needs Google Chrome or Microsoft Edge. For the most reliable one-time linking, open the HTTPS/Vercel version of this website rather than the downloaded HTML file.");
+      return;
+    }
+    if (typeof XLSX === "undefined") {
+      alert("Excel library is not loaded. Please check your internet connection and try again.");
+      return;
+    }
+
+    // If a file was already linked, NEVER make the user choose it again.
+    // Just restore/request permission for the existing handle and sync it.
+    if (linkedExcelHandle) {
+      const permitted = await hasExcelWritePermission(linkedExcelHandle, true);
+      if (permitted) {
+        excelStatus(`✓ Linked to ${linkedExcelHandle.name}. Automatic updates are enabled.`, "good");
+        await syncLinkedExcelWorkbook(false);
+      } else {
+        excelStatus(`Access to ${linkedExcelHandle.name} was not granted. The file is still linked; click Sync and allow access.`, "warn");
+      }
+      return;
+    }
+
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: "devbhoomi-bill-book.xlsx",
+        types: [{ description: "Excel Workbook", accept: { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"] } }]
+      });
+      linkedExcelHandle = handle;
+      await storeExcelHandle(handle);
+      const permitted = await hasExcelWritePermission(handle, true);
+      if (!permitted) { excelStatus("Excel file selected, but write permission was not granted.", "warn"); return; }
+      excelStatus(`✓ Linked to ${handle.name}. You will not need to select this file again unless you change/revoke access.`, "good");
+      await syncLinkedExcelWorkbook(false);
+    } catch (e) {
+      if (e && e.name !== "AbortError") alert("Excel linking was not completed.");
+    }
+  }
+
+  async function manualSyncLinkedExcel() {
+    if (!linkedExcelHandle) {
+      await linkExcelFile();
+      return;
+    }
+    // Re-authorize the SAME stored file; never ask the user to select it again.
+    const permitted = await hasExcelWritePermission(linkedExcelHandle, true);
+    if (!permitted) {
+      excelStatus(`Could not get write access to ${linkedExcelHandle.name}. The file is still linked; allow access when Chrome asks.`, "warn");
+      return;
+    }
+    await syncLinkedExcelWorkbook(true);
+  }
+
+  /* ===========================================================
+     EXCEL IMPORT / EXPORT (SheetJS)
+  =========================================================== */
+  function pickField(row, aliases) {
+    const keys = Object.keys(row);
+    for (const alias of aliases) {
+      const found = keys.find((k) => k.trim().toLowerCase() === alias);
+      if (found !== undefined && row[found] !== "") return row[found];
+    }
+    return "";
+  }
+
+  function readWorkbookRows(file, callback) {
+    if (typeof XLSX === "undefined") {
+      alert("Excel import needs an internet connection to load the reader library. Please reconnect and try again.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const wb = XLSX.read(new Uint8Array(e.target.result), { type: "array" });
+        const sheet = wb.Sheets[wb.SheetNames[0]];
+        const rows = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+        callback(rows);
+      } catch (err) {
+        alert("Could not read that file. Please use a .xlsx, .xls or .csv file.");
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function syncItemsCatalogFromTable() {
+    const rows = Array.from(document.querySelectorAll("#itemsMasterBody tr"));
+    rows.forEach((tr, index) => {
+      const it = itemsMaster[index];
+      if (!it) return;
+      const val = (sel) => tr.querySelector(sel)?.value ?? "";
+      it.productId = String(val(".m-product-id")).trim();
+      it.desc = String(val(".m-desc")).trim();
+      it.hsn = String(val(".m-hsn")).trim();
+      it.unit = String(val(".m-unit")).trim() || "PCS";
+      it.costPrice = parseFloat(val(".m-cost")) || 0;
+      it.salePrice = parseFloat(val(".m-sale")) || 0;
+      it.gst = parseFloat(val(".m-gst")) || 0;
+      it.purchases = parseFloat(val(".m-purchases")) || 0;
+      it.track = !!tr.querySelector(".m-track")?.checked;
+      it.stock = round2((it.purchases || 0) - (it.sold || 0));
+    });
+    saveItemsMaster();
+  }
+
+  function saveItemsCatalogNow() {
+    syncItemsCatalogFromTable();
+    const note = $("itemsCatalogSavedNote");
+    if (note) {
+      note.textContent = "✓ Item catalog saved successfully on this device. You can restore it later using Import Excel / WPS.";
+      note.style.color = "#15803d";
+      setTimeout(() => { note.textContent = "Product data is saved on this device. Use Download Excel / WPS regularly as a backup."; note.style.color = "#64748b"; }, 3500);
+    }
+  }
+
+  function importItemsFromExcel(file) {
+    readWorkbookRows(file, (rows) => {
+      const imported = [];
+      rows.forEach((row) => {
+        const desc = pickField(row, ["description", "item", "name", "product"]);
+        const productId = pickField(row, ["product id", "productid", "product code", "code", "sku"]);
+        if (!desc && !productId) return;
+        const purchases = parseFloat(pickField(row, ["no. of purchase", "purchase qty", "purchases", "opening stock"])) || 0;
+        const sold = parseFloat(pickField(row, ["no. of sold items", "sold qty", "sold", "sales qty"])) || 0;
+        imported.push(normalizeItem({
+          id: uid(),
+          productId: String(productId || "").trim(),
+          desc: String(desc || "").trim(),
+          hsn: String(pickField(row, ["hsn", "hsn/sac", "hsn code", "sac"]) || "").trim(),
+          unit: String(pickField(row, ["unit", "uom", "per"]) || "PCS").trim(),
+          costPrice: parseFloat(pickField(row, ["cost price", "cost", "purchase price"])) || 0,
+          salePrice: parseFloat(pickField(row, ["sale price", "rate", "price", "mrp"])) || 0,
+          purchases, sold,
+          gst: parseFloat(pickField(row, ["gst", "gst%", "gst %", "tax%", "tax %"])) || 0,
+          track: String(pickField(row, ["track stock", "track"]) || "yes").toLowerCase() !== "no"
+        }));
+      });
+      if (!imported.length) { alert("No valid product rows were found in the Excel/WPS file."); return; }
+      const ok = confirm("Import " + imported.length + " product(s) and replace the current Item Catalog?\n\nThis is useful for restoring a backup in one go.");
+      if (!ok) return;
+      itemsMaster = imported;
+      saveItemsMaster();
+      renderItemsMasterTable();
+      const note = $("itemsCatalogSavedNote");
+      if (note) { note.textContent = "✓ " + imported.length + " product(s) restored and saved to this device."; note.style.color = "#15803d"; }
+      alert(imported.length + " product(s) restored successfully. The Item Catalog has been saved on this device.");
     });
   }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
-}
- 
-/* ============ TIMELINE LINE FILLS AS YOU SCROLL THROUGH IT ============ */
-function initTimelineFill() {
-  var timeline = document.querySelector('.timeline');
-  var fill = document.getElementById('timelineFill');
-  if (!timeline || !fill) return;
-  function onScroll() {
-    var rect = timeline.getBoundingClientRect();
-    var vh = window.innerHeight;
-    var progress = (vh * 0.75 - rect.top) / rect.height;
-    progress = Math.max(0, Math.min(1, progress));
-    fill.style.height = (progress * 100) + '%';
+
+  function importPartiesFromExcel(file) {
+    readWorkbookRows(file, (rows) => {
+      let count = 0;
+      rows.forEach((row) => {
+        const name = pickField(row, ["name", "party", "customer", "buyer"]);
+        if (!name) return;
+        upsertPartyMaster({
+          name: String(name),
+          address: String(pickField(row, ["address"])),
+          gstin: String(pickField(row, ["gstin", "gstin/uin", "gst no"])),
+          state: String(pickField(row, ["state", "state name"])),
+          stateCode: String(pickField(row, ["code", "state code"])),
+          contact: String(pickField(row, ["contact", "phone", "mobile"])),
+        });
+        count += 1;
+      });
+      renderPartiesMasterTable();
+      alert(count + " part(y/ies) imported.");
+    });
   }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
-}
- 
-/* ============ CUSTOM CURSOR ============ */
-function initCustomCursor() {
-  if (isTouchDevice) return;
-  var dot = document.createElement('div'); dot.className = 'cursor-dot';
-  var ring = document.createElement('div'); ring.className = 'cursor-ring';
-  document.body.appendChild(dot); document.body.appendChild(ring);
-  document.body.classList.add('custom-cursor-active');
-  var targetX = 0, targetY = 0, ringX = 0, ringY = 0;
-  document.addEventListener('mousemove', function (e) {
-    dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
-    targetX = e.clientX; targetY = e.clientY;
-  });
-  function animateRing() {
-    ringX += (targetX - ringX) * 0.15; ringY += (targetY - ringY) * 0.15;
-    ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
+
+  function exportItemsToExcel() {
+    syncItemsCatalogFromTable();
+    if (typeof XLSX === "undefined") { alert("Excel/WPS export needs an internet connection to load the spreadsheet library."); return; }
+    const rows = itemsMaster.map((it) => ({
+      "Product ID": it.productId || "", Description: it.desc, "HSN/SAC": it.hsn, Unit: it.unit, "Cost Price": it.costPrice || 0,
+      "Sale Price": it.salePrice || 0, "GST%": it.gst || 0, "No. of Purchase": it.purchases || 0,
+      "No. of Sold Items": it.sold || 0, "Current Stock": round2((it.purchases || 0) - (it.sold || 0)), "Track Stock": it.track ? "Yes" : "No"
+    }));
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), "Items");
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(readHistory().map((inv) => ({
+      Date: formatDate(inv.invDate), "Invoice No": inv.invNumber, Party: inv.custName,
+      Taxable: inv.taxable || 0, CGST: inv.cgst || 0, SGST: inv.sgst || 0, IGST: inv.igst || 0, Total: inv.grandTotal || 0
+    }))), "Sales Register");
+    XLSX.writeFile(wb, "devbhoomi-bill-book.xlsx");
   }
-  animateRing();
-  document.querySelectorAll('a, button, .tilt').forEach(function (el) {
-    el.addEventListener('mouseenter', function () { ring.classList.add('hover'); });
-    el.addEventListener('mouseleave', function () { ring.classList.remove('hover'); });
-  });
-}
- 
-/* ============ 3D TILT ON HOVER ============ */
-function initTilt() {
-  if (isTouchDevice) return;
-  document.querySelectorAll('.tilt').forEach(function (el) {
-    el.addEventListener('mousemove', function (e) {
-      var rect = el.getBoundingClientRect();
-      var x = e.clientX - rect.left, y = e.clientY - rect.top;
-      var cx = rect.width / 2, cy = rect.height / 2;
-      var rotateX = ((y - cy) / cy) * -6, rotateY = ((x - cx) / cx) * 6;
-      el.style.transform = 'perspective(700px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
-    });
-    el.addEventListener('mouseleave', function () { el.style.transform = ''; });
-  });
-}
- 
-/* ============ RIPPLE ON CLICK ============ */
-function initRipple() {
-  document.querySelectorAll('.btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      var ripple = document.createElement('span'); ripple.className = 'ripple';
-      var rect = btn.getBoundingClientRect();
-      ripple.style.left = (e.clientX - rect.left) + 'px'; ripple.style.top = (e.clientY - rect.top) + 'px';
-      btn.appendChild(ripple);
-      setTimeout(function () { ripple.remove(); }, 650);
-    });
-  });
-}
- 
-/* ============ MAGNETIC BUTTONS ============ */
-function initMagnetic() {
-  if (isTouchDevice) return;
-  document.querySelectorAll('.magnetic').forEach(function (btn) {
-    btn.addEventListener('mousemove', function (e) {
-      var rect = btn.getBoundingClientRect();
-      var x = e.clientX - rect.left - rect.width / 2, y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = 'translate(' + x * 0.25 + 'px,' + y * 0.25 + 'px)';
-    });
-    btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
-  });
-}
- 
-/* ============ ANIMATED COUNTERS ============ */
-function initCounters() {
-  var counters = document.querySelectorAll('[data-count]');
-  function animate(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    if (prefersReducedMotion) { el.textContent = target; return; }
-    var current = 0, steps = 40, increment = target / steps;
-    var timer = setInterval(function () {
-      current += increment;
-      if (current >= target) { current = target; clearInterval(timer); }
-      el.textContent = Math.floor(current);
-    }, 30);
+
+  function exportPartiesToExcel() {
+    if (typeof XLSX === "undefined") { alert("Export needs an internet connection to load the Excel library."); return; }
+    const rows = partiesMaster.map((p) => ({ Name: p.name, Address: p.address, GSTIN: p.gstin, State: p.state, Code: p.stateCode, Contact: p.contact }));
+    const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), "Parties"); XLSX.writeFile(wb, "parties.xlsx");
   }
-  var counterObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) { animate(entry.target); counterObserver.unobserve(entry.target); }
+
+  function exportRegisterToExcel() {
+    if (typeof XLSX === "undefined") { alert("Export needs an internet connection to load the spreadsheet library."); return; }
+    const rows = readHistory().map((inv) => ({
+      Date: formatDate(inv.invDate), "Invoice No": inv.invNumber, Party: inv.custName,
+      Taxable: inv.taxable || 0, CGST: inv.cgst || 0, SGST: inv.sgst || 0, IGST: inv.igst || 0, Total: inv.grandTotal || 0,
+      "Items / Qty": (inv.items || []).map((x) => `${x.desc} × ${x.qty}`).join(" | ")
+    }));
+    const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), "Sales Register");
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(itemsMaster.map((it) => ({ "Product ID":it.productId||"", Description:it.desc, "Cost Price":it.costPrice||0, "Sale Price":it.salePrice||0, Purchases:it.purchases||0, Sold:it.sold||0, Stock:round2((it.purchases||0)-(it.sold||0)) }))), "Inventory");
+    XLSX.writeFile(wb, "devbhoomi-sales-register.xlsx");
+  }
+
+  function buildPptx(filename, includeInvoice) {
+    if (typeof PptxGenJS === "undefined") { alert("WPS PowerPoint export needs an internet connection to load the PowerPoint library."); return; }
+    const pptx = new PptxGenJS(); pptx.layout = "LAYOUT_WIDE"; pptx.author = "DEVBHOOMI BILL BOOK"; pptx.subject = "Billing & Inventory Report";
+    const title = (slide, text, sub) => { slide.addText(text, {x:.55,y:.35,w:12.2,h:.45,fontSize:24,bold:true,color:"101B33"}); if(sub) slide.addText(sub,{x:.58,y:.82,w:12,h:.3,fontSize:10,color:"666666"}); };
+    let slide = pptx.addSlide(); title(slide,"DEVBHOOMI BILL BOOK","Billing, inventory and sales report");
+    const h = itemsMaster.length, sold = itemsMaster.reduce((a,x)=>a+(x.sold||0),0), stock = itemsMaster.reduce((a,x)=>a+((x.purchases||0)-(x.sold||0)),0), sales = readHistory().reduce((a,x)=>a+(x.grandTotal||0),0);
+    slide.addText(`Items: ${h}\nUnits sold: ${sold}\nCurrent stock: ${stock}\nSales value: ₹${fmt(sales)}`,{x:.8,y:1.55,w:5.2,h:2,fontSize:22,bold:true,breakLine:false});
+    slide.addText("Generated from the local DEVBHOOMI BILL BOOK database.",{x:.8,y:4.5,w:7,h:.4,fontSize:12,color:"666666"});
+    slide = pptx.addSlide(); title(slide,"Inventory","Cost price, sale price, purchases, sold quantity and current stock");
+    const invRows = itemsMaster.map((it)=>[it.productId||"",it.desc,it.unit,it.costPrice||0,it.salePrice||0,it.purchases||0,it.sold||0,round2((it.purchases||0)-(it.sold||0))]);
+    slide.addTable([["Item","Unit","Cost","Sale","Purchased","Sold","Stock"],...invRows],{x:.35,y:1.15,w:12.55,h:5.8,border:{type:"solid",color:"D9D9D9",pt:1},fontSize:9,autoFit:false,colW:[3.0,.8,1.15,1.15,1.2,1.0,1.0]});
+    slide = pptx.addSlide(); title(slide,"Sales Register","Saved invoices");
+    const salesRows = readHistory().map(inv=>[formatDate(inv.invDate),inv.invNumber||"",inv.custName||"",fmt(inv.taxable||0),fmt(inv.grandTotal||0)]);
+    slide.addTable([["Date","Invoice","Customer","Taxable","Total"],...salesRows],{x:.45,y:1.15,w:12.1,h:5.8,fontSize:9,border:{type:"solid",color:"D9D9D9",pt:1},colW:[1.4,1.3,4.5,1.8,1.8]});
+    if (includeInvoice) {
+      slide = pptx.addSlide(); title(slide,"Current Invoice",`Invoice ${$("invNumber").value || "—"} · ${formatDate($("invDate").value)}`);
+      const its = readItems(true).filter(x=>x.desc); slide.addTable([["Item","Qty","Rate","Taxable","GST"],...its.map(x=>[x.desc,x.qty,x.rate,x.taxable,x.gstAmt])],{x:.45,y:1.2,w:12.1,h:4.2,fontSize:10,border:{type:"solid",color:"D9D9D9",pt:1}});
+      const t=lastTotals||renderAll(); slide.addText(`Customer: ${$("custName").value||"—"}\nGrand Total: ₹${fmt(t.grand)}`,{x:.55,y:5.75,w:6,h:.8,fontSize:18,bold:true,color:"101B33"});
+    }
+    pptx.writeFile({ fileName: filename });
+  }
+  function downloadInvoicePdf() {
+    const paper = $("invoicePaper");
+    if (typeof html2pdf === "undefined") { window.print(); return; }
+    html2pdf().set({
+      margin: 0.2,
+      filename: `invoice-${$("invNumber").value || "draft"}.pdf`,
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+      jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
+    }).from(paper).save();
+  }
+  function exportInventoryPpt() { buildPptx("devbhoomi-inventory-report.pptx", false); }
+  function exportReportsPpt() { buildPptx("devbhoomi-full-report.pptx", false); }
+  function downloadInvoicePpt() { buildPptx(`invoice-${$("invNumber").value || "draft"}.pptx`, true); }
+
+  /* ===========================================================
+     ITEM ROWS (invoice editor)
+  =========================================================== */
+  const itemsBody = $("itemsBody");
+  const rowTemplate = $("itemRowTemplate");
+
+  function autofillFromCatalog(tr) {
+    const match = findCatalogItem(tr.querySelector(".i-product-id").value, tr.querySelector(".i-desc").value);
+    if (match) { tr.querySelector(".i-product-id").value=match.productId||""; tr.querySelector(".i-desc").value=match.desc||""; tr.querySelector(".i-hsn").value = match.hsn || "";
+      tr.querySelector(".i-rate").value = match.salePrice ?? match.rate ?? 0;
+      tr.querySelector(".i-unit").value = match.unit || "PCS";
+      tr.querySelector(".i-gst").value = String(match.gst ?? 18);
+    }
+  }
+
+  function addItemRow(data) {
+    const frag = rowTemplate.content.cloneNode(true);
+    const tr = frag.querySelector("tr");
+
+    if (data) {
+      tr.querySelector(".i-product-id").value = data.productId || "";
+      tr.querySelector(".i-desc").value = data.desc || "";
+      tr.querySelector(".i-hsn").value = data.hsn || "";
+      tr.querySelector(".i-qty").value = data.qty ?? 1;
+      tr.querySelector(".i-unit").value = data.unit || "PCS";
+      tr.querySelector(".i-rate").value = data.rate ?? 0;
+      tr.querySelector(".i-disc").value = data.disc ?? 0;
+      tr.querySelector(".i-gst").value = String(data.gst ?? 18);
+    }
+
+    tr.querySelector(".i-product-id").addEventListener("input", () => autofillFromCatalog(tr));
+    tr.querySelector(".i-desc").addEventListener("input", () => autofillFromCatalog(tr));
+    tr.querySelectorAll("input, select").forEach((el) => { el.addEventListener("input", () => { renderAll(); saveDraft(); }); el.addEventListener("change", () => { renderAll(); saveDraft(); }); });
+    tr.querySelector(".i-del").addEventListener("click", () => { tr.remove(); renderAll(); });
+
+    itemsBody.appendChild(tr);
+    return tr;
+  }
+
+  function readItems(intraState) {
+    return Array.from(itemsBody.querySelectorAll(".item-row")).map((tr) => {
+      const qty = parseFloat(tr.querySelector(".i-qty").value) || 0;
+      const unit = tr.querySelector(".i-unit").value.trim() || "PCS";
+      const rate = parseFloat(tr.querySelector(".i-rate").value) || 0;
+      const disc = parseFloat(tr.querySelector(".i-disc").value) || 0;
+      const gst = parseFloat(tr.querySelector(".i-gst").value) || 0;
+      const productId = tr.querySelector(".i-product-id").value.trim();
+      const desc = tr.querySelector(".i-desc").value.trim();
+      const hsn = tr.querySelector(".i-hsn").value.trim();
+
+      const gross = qty * rate;
+      const discountAmt = gross * (disc / 100);
+      const taxable = gross - discountAmt;
+      const rawGst = taxable * (gst / 100);
+
+      let cgst = 0, sgst = 0, igst = 0;
+      if (intraState) { cgst = round2(rawGst / 2); sgst = round2(rawGst / 2); }
+      else { igst = round2(rawGst); }
+      const gstAmt = cgst + sgst + igst;
+
+      tr.querySelector(".i-amt").textContent = "₹" + fmt(taxable);
+      return { productId, desc, hsn, qty, unit, rate, disc, gst, gross, discountAmt, taxable, gstAmt, cgst, sgst, igst };
     });
-  }, { threshold: 0.5 });
-  counters.forEach(function (el) { counterObserver.observe(el); });
-}
+  }
+
+  function sameState(a, b) { if (!a || !b) return true; return a.trim().toLowerCase() === b.trim().toLowerCase(); }
+
+  /* ---------------------------------------------------------
+     Consignee "same as buyer"
+  --------------------------------------------------------- */
+  function syncConsignee() {
+    const same = $("shipSameAsBuyer").checked;
+    $("shipFields").style.opacity = same ? "0.5" : "1";
+    ["Name", "Address", "Gstin", "State", "StateCode", "Contact"].forEach((k) => { $("ship" + k).disabled = same; });
+  }
+  function getConsignee() {
+    if ($("shipSameAsBuyer").checked) {
+      return { name: $("custName").value, address: $("custAddress").value, gstin: $("custGstin").value,
+        state: $("custState").value, stateCode: $("custStateCode").value, contact: $("custContact").value };
+    }
+    return { name: $("shipName").value, address: $("shipAddress").value, gstin: $("shipGstin").value,
+      state: $("shipState").value, stateCode: $("shipStateCode").value, contact: $("shipContact").value };
+  }
+
+  /* ===========================================================
+     MAIN RENDER
+  =========================================================== */
+  let lastTotals = null;
+
+  function renderAll() {
+    const bizState = $("bizState").value;
+    const custState = $("custState").value;
+    const intraState = sameState(bizState, custState);
+    const items = readItems(intraState);
+
+    let totalTaxable = 0, totalGst = 0, totalQty = 0, cgstTotal = 0, sgstTotal = 0, igstTotal = 0;
+    const units = new Set();
+    items.forEach((it) => {
+      totalTaxable += it.taxable; totalGst += it.gstAmt;
+      cgstTotal += it.cgst; sgstTotal += it.sgst; igstTotal += it.igst;
+      totalQty += it.qty; if (it.qty) units.add(it.unit);
+    });
+
+    let grand = totalTaxable + totalGst;
+    let roundOff = 0;
+    if ($("roundOff").value === "yes") {
+      const rounded = Math.round(grand);
+      roundOff = rounded - grand;
+      grand = rounded;
+    }
+
+    $("pBizName").textContent = $("bizName").value || "Your Business Name";
+    $("pBizNameSign").textContent = $("bizName").value || "Your Business Name";
+    $("pBizAddress").textContent = $("bizAddress").value || "Business address";
+    $("pBizGstin").textContent = $("bizGstin").value || "—";
+    $("pBizState").textContent = bizState || "—";
+    $("pBizStateCode").textContent = $("bizStateCode").value || "—";
+    $("pBizContact").textContent = $("bizContact").value || "—";
+    $("pBizEmail").textContent = $("bizEmail").value || "—";
+
+    $("pInvNumber").textContent = $("invNumber").value || "—";
+    $("pInvDate").textContent = formatDate($("invDate").value);
+    $("pDeliveryNote").textContent = $("deliveryNote").value || "—";
+    $("pModeOfPayment").textContent = $("modeOfPayment").value || "—";
+    $("pReferenceNo").textContent = [$("referenceNo").value, $("referenceDate").value ? formatDate($("referenceDate").value) : ""].filter(Boolean).join(" / ") || "—";
+    $("pOtherReferences").textContent = $("otherReferences").value || "—";
+    $("pBuyersOrderNo").textContent = $("buyersOrderNo").value || "—";
+    $("pBuyersOrderDate").textContent = formatDate($("buyersOrderDate").value);
+    $("pDispatchDocNo").textContent = $("dispatchDocNo").value || "—";
+    $("pDeliveryNoteDate").textContent = formatDate($("deliveryNoteDate").value);
+    $("pDispatchedThrough").textContent = $("dispatchedThrough").value || "—";
+    $("pDestination").textContent = $("destination").value || "—";
+    $("pTermsOfDelivery").textContent = $("termsOfDelivery").value || "—";
+
+    $("pCustName").textContent = $("custName").value || "—";
+    $("pCustAddress").textContent = $("custAddress").value || "";
+    $("pCustGstin").textContent = $("custGstin").value || "—";
+    $("pCustState").textContent = custState || "—";
+    $("pCustStateCode").textContent = $("custStateCode").value || "—";
+    $("pCustContact").textContent = $("custContact").value || "—";
+
+    const ship = getConsignee();
+    $("pShipName").textContent = ship.name || "—";
+    $("pShipAddress").textContent = ship.address || "";
+    $("pShipGstin").textContent = ship.gstin || "—";
+    $("pShipState").textContent = ship.state || "—";
+    $("pShipStateCode").textContent = ship.stateCode || "—";
+    $("pShipContact").textContent = ship.contact || "—";
+
+    const paperBody = $("paperBody");
+    paperBody.innerHTML = "";
+    let sl = 0;
+    items.forEach((it) => {
+      if (!it.desc && it.taxable === 0) return;
+      sl += 1;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="col-sl">${sl}</td>
+        <td class="col-desc">${escapeHtml(it.desc || "Untitled item")}</td>
+        <td class="col-hsn">${escapeHtml(it.hsn)}</td>
+        <td class="col-qty">${it.qty} ${escapeHtml(it.unit)}</td>
+        <td class="col-rate">${fmt(it.rate)}</td>
+        <td class="col-unit">${escapeHtml(it.unit)}</td>
+        <td class="col-disc">${it.disc ? it.disc + "%" : ""}</td>
+        <td class="col-amt">${fmt(it.taxable)}</td>
+      `;
+      paperBody.appendChild(tr);
+    });
+    if (!paperBody.children.length) {
+      paperBody.innerHTML = `<tr><td colspan="8" style="color:#666; font-style:italic; text-align:center;">Add items to see them here</td></tr>`;
+    }
+
+    $("rowCgst").classList.toggle("is-hidden", !intraState);
+    $("rowSgst").classList.toggle("is-hidden", !intraState);
+    $("rowIgst").classList.toggle("is-hidden", intraState);
+    $("cgstRateLabel").textContent = items[0] ? (items[0].gst / 2) : 9;
+    $("sgstRateLabel").textContent = items[0] ? (items[0].gst / 2) : 9;
+    $("igstRateLabel").textContent = items[0] ? items[0].gst : 18;
+    $("tCgst").textContent = fmt(cgstTotal);
+    $("tSgst").textContent = fmt(sgstTotal);
+    $("tIgst").textContent = fmt(igstTotal);
+    $("rowRound").classList.toggle("is-hidden", roundOff === 0);
+    $("tRound").textContent = (roundOff >= 0 ? "" : "−") + fmt(Math.abs(roundOff));
+
+    const qtyLabel = units.size === 1 ? `${totalQty} ${[...units][0]}` : String(totalQty);
+    $("tTotalQty").textContent = qtyLabel;
+    $("tGrand").textContent = "₹" + fmt(grand);
+
+    $("pAmountWords").textContent = amountInWords(grand);
+    $("pTaxWords").textContent = amountInWords(totalGst);
+
+    const groups = {};
+    items.forEach((it) => {
+      if (!it.hsn && it.taxable === 0) return;
+      const key = it.hsn || "—";
+      if (!groups[key]) groups[key] = { hsn: key, taxable: 0, cgst: 0, sgst: 0, igst: 0, rate: it.gst };
+      groups[key].taxable += it.taxable; groups[key].cgst += it.cgst; groups[key].sgst += it.sgst; groups[key].igst += it.igst;
+    });
+
+    $("hsnCgstHead").textContent = intraState ? "CGST" : "IGST";
+    document.querySelectorAll(".hsn-table thead tr:nth-child(2) th").forEach((th, i) => { if (i >= 2) th.style.display = intraState ? "" : "none"; });
+
+    const hsnBody = $("hsnBody");
+    hsnBody.innerHTML = "";
+    let hTaxable = 0, hCgst = 0, hSgst = 0, hTax = 0;
+    Object.values(groups).forEach((g) => {
+      const totalTax = g.cgst + g.sgst + g.igst;
+      hTaxable += g.taxable; hCgst += g.cgst; hSgst += g.sgst; hTax += totalTax;
+      const tr = document.createElement("tr");
+      if (intraState) {
+        tr.innerHTML = `<td class="col-hsn">${escapeHtml(g.hsn)}</td><td class="col-taxable">${fmt(g.taxable)}</td>
+          <td class="col-rate">${g.rate / 2}%</td><td class="col-amt">${fmt(g.cgst)}</td>
+          <td class="col-rate">${g.rate / 2}%</td><td class="col-amt">${fmt(g.sgst)}</td>
+          <td class="col-totaltax">${fmt(totalTax)}</td>`;
+      } else {
+        tr.innerHTML = `<td class="col-hsn">${escapeHtml(g.hsn)}</td><td class="col-taxable">${fmt(g.taxable)}</td>
+          <td class="col-rate">${g.rate}%</td><td class="col-amt">${fmt(g.igst)}</td><td colspan="2"></td>
+          <td class="col-totaltax">${fmt(totalTax)}</td>`;
+      }
+      hsnBody.appendChild(tr);
+    });
+    if (!hsnBody.children.length) hsnBody.innerHTML = `<tr><td colspan="7" style="text-align:center; font-style:italic; color:#666;">—</td></tr>`;
+    $("hTotalTaxable").textContent = fmt(hTaxable);
+    $("hTotalCgst").textContent = fmt(hCgst);
+    $("hTotalSgst").textContent = fmt(hSgst);
+    $("hTotalTax").textContent = fmt(hTax);
+
+    $("pDeclaration").textContent = $("declaration").value || "";
+    $("pBankName").textContent = $("bankName").value || "—";
+    $("pBankAccount").textContent = $("bankAccount").value || "—";
+    $("pBankBranchIfsc").textContent = $("bankBranchIfsc").value || "—";
+
+    lastTotals = { totalTaxable, totalGst, cgstTotal, sgstTotal, igstTotal, roundOff, grand, intraState, items };
+    scheduleDraftSave();
+    return lastTotals;
+  }
+
+  /* ===========================================================
+     DRAFT AUTOSAVE / RESTORE  (fixes data loss on refresh)
+  =========================================================== */
+  const DRAFT_FIELDS = [
+    "invNumber", "invDate", "deliveryNote", "modeOfPayment", "referenceNo", "referenceDate",
+    "otherReferences", "buyersOrderNo", "buyersOrderDate", "dispatchDocNo", "deliveryNoteDate",
+    "dispatchedThrough", "destination", "termsOfDelivery",
+    "custName", "custAddress", "custGstin", "custState", "custStateCode", "custContact",
+    "shipSameAsBuyer", "shipName", "shipAddress", "shipGstin", "shipState", "shipStateCode", "shipContact",
+    "bankName", "bankAccount", "bankBranchIfsc", "roundOff", "declaration",
+  ];
+
+  let draftTimer = null;
+  function scheduleDraftSave() { clearTimeout(draftTimer); draftTimer = setTimeout(saveDraft, 80); }
+
+  function snapshotForm() {
+    const snap = {};
+    DRAFT_FIELDS.forEach((key) => {
+      const el = $(key);
+      if (!el) return;
+      snap[key] = el.type === "checkbox" ? el.checked : el.value;
+    });
+    snap.items = readItems(true).map((it) => ({ productId: it.productId, desc: it.desc, hsn: it.hsn, qty: it.qty, unit: it.unit, rate: it.rate, disc: it.disc, gst: it.gst }));
+    return snap;
+  }
+
+  function saveDraft() {
+    try {
+      const payload = JSON.stringify(snapshotForm());
+      localStorage.setItem(LS_DRAFT, payload);
+      // Redundant backup: keeps the current editor state recoverable if the primary draft key is damaged.
+      localStorage.setItem(LS_DRAFT + ".backup", payload);
+    } catch (e) {
+      try { localStorage.setItem(LS_DRAFT + ".backup", JSON.stringify(snapshotForm())); } catch (_) {}
+    }
+  }
+
+  function restoreDraftSafely() {
+    let draft = null;
+    try { draft = JSON.parse(localStorage.getItem(LS_DRAFT) || "null"); } catch (e) {}
+    if (!draft) { try { draft = JSON.parse(localStorage.getItem(LS_DRAFT + ".backup") || "null"); } catch (e) {} }
+    return draft;
+  }
+
+  function applySnapshotToForm(snap) {
+    DRAFT_FIELDS.forEach((key) => {
+      const el = $(key);
+      if (!el || !(key in snap)) return;
+      if (el.type === "checkbox") el.checked = !!snap[key];
+      else el.value = snap[key] ?? "";
+    });
+    itemsBody.innerHTML = "";
+    (snap.items || []).forEach((it) => addItemRow(it));
+    if (!snap.items || !snap.items.length) addItemRow();
+    syncConsignee();
+  }
+
+  function hasDraftContent(snap) {
+    if (snap.custName || snap.custAddress) return true;
+    return (snap.items || []).some((it) => it.desc || it.rate);
+  }
+
+  /* ===========================================================
+     BUSINESS SETTINGS
+  =========================================================== */
+  function getBusiness(){try{return JSON.parse(localStorage.getItem(LS_BUSINESS)||"{}")}catch(e){return {}}}
+  function loadBusiness() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(LS_BUSINESS) || "{}");
+      $("bizName").value = saved.name || "";
+      $("bizAddress").value = saved.address || "";
+      $("bizGstin").value = saved.gstin || "";
+      $("bizState").value = saved.state || "";
+      $("bizStateCode").value = saved.stateCode || "";
+      $("bizContact").value = saved.contact || "";
+      $("bizEmail").value = saved.email || "";
+      $("bizBankName").value = saved.bankName || "";
+      $("bizBankAccount").value = saved.bankAccount || "";
+      $("bizBankBranchIfsc").value = saved.bankBranchIfsc || "";
+    } catch (e) { /* ignore corrupt data */ }
+  }
+  function applyBusinessBankDefaults(force = false) {
+    const saved = getBusiness();
+    if (!$('bankName') || !$('bankAccount') || !$('bankBranchIfsc')) return;
+    if (force || !$('bankName').value.trim()) $('bankName').value = saved.bankName || '';
+    if (force || !$('bankAccount').value.trim()) $('bankAccount').value = saved.bankAccount || '';
+    if (force || !$('bankBranchIfsc').value.trim()) $('bankBranchIfsc').value = saved.bankBranchIfsc || '';
+  }
+
+  function saveBusiness() {
+    const data = {
+      name: $("bizName").value.trim(), address: $("bizAddress").value.trim(),
+      gstin: $("bizGstin").value.trim(), state: $("bizState").value.trim(),
+      stateCode: $("bizStateCode").value.trim(), contact: $("bizContact").value.trim(),
+      email: $("bizEmail").value.trim(),
+      bankName: $("bizBankName").value.trim(),
+      bankAccount: $("bizBankAccount").value.trim(),
+      bankBranchIfsc: $("bizBankBranchIfsc").value.trim(),
+    };
+    localStorage.setItem(LS_BUSINESS, JSON.stringify(data));
+    applyBusinessBankDefaults(false);
+    $("bizSavedNote").textContent = "Saved.";
+    setTimeout(() => { $("bizSavedNote").textContent = ""; }, 2000);
+    renderAll();
+  }
+
+  /* ===========================================================
+     HISTORY
+  =========================================================== */
+  function readHistory() { try { return JSON.parse(localStorage.getItem(LS_HISTORY) || "[]"); } catch (e) { return []; } }
+  function writeHistory(list) { localStorage.setItem(LS_HISTORY, JSON.stringify(list)); $("historyCount").textContent = list.length; }
+
+  function snapshotInvoice() {
+    const totals = renderAll();
+    const snap = snapshotForm();
+    snap.savedAt = new Date().toISOString();
+    snap.taxable = totals.totalTaxable;
+    snap.cgst = totals.cgstTotal;
+    snap.sgst = totals.sgstTotal;
+    snap.igst = totals.igstTotal;
+    snap.grandTotal = totals.grand;
+    return snap;
+  }
+
+  function saveCurrentInvoice() {
+    const snap = snapshotInvoice();
+    if (!snap.custName && !snap.items.length) { alert("Add a customer or at least one item before saving."); return; }
+    const duplicate = readHistory().some(x => x.invNumber && x.invNumber === snap.invNumber);
+    if (duplicate && !confirm("This invoice number already exists. Save another invoice with the same number?")) return;
+    for (const it of snap.items) {
+      const match = findCatalogItem(it.productId, it.desc);
+      if (match && match.track && (it.qty || 0) > ((match.purchases || 0) - (match.sold || 0))) {
+        alert(`Insufficient stock for ${it.desc}. Available: ${round2((match.purchases||0)-(match.sold||0))}, requested: ${it.qty}.`); return;
+      }
+    }
+    snap.inventoryApplied = true;
+    const list = readHistory(); list.unshift(snap); writeHistory(list);
+    snap.items.forEach((it) => {
+      const match = findCatalogItem(it.productId, it.desc);
+      if (match) match.sold = round2((match.sold || 0) + (it.qty || 0));
+    });
+    saveItemsMaster(); renderItemsMasterTable(); renderHistoryList(); renderReports();
+    alert("Invoice saved. Sold quantity and stock have been updated automatically.");
+  }
+
+  function renderHistoryList() {
+    const list = readHistory();
+    const el = $("historyList");
+    el.innerHTML = "";
+    if (!list.length) {
+      el.innerHTML = `<p class="history-empty">No saved invoices yet. Fill one in, then use "Save to history" from the New invoice screen.</p>`;
+      return;
+    }
+    list.forEach((inv, idx) => {
+      const row = document.createElement("div");
+      row.className = "history-item";
+      row.innerHTML = `
+        <div>
+          <strong>${escapeHtml(inv.invNumber || "Untitled")} — ${escapeHtml(inv.custName || "No customer")}</strong>
+          <span>${formatDate(inv.invDate)} · ₹${fmt(inv.grandTotal)}</span>
+        </div>
+        <div class="history-actions">
+          <button data-idx="${idx}" class="load-btn">Load</button>
+          <button data-idx="${idx}" class="danger del-btn">Delete</button>
+        </div>
+      `;
+      el.appendChild(row);
+    });
+    el.querySelectorAll(".load-btn").forEach((btn) => btn.addEventListener("click", () => loadInvoice(parseInt(btn.dataset.idx, 10))));
+    el.querySelectorAll(".del-btn").forEach((btn) => btn.addEventListener("click", () => {
+      const idx = parseInt(btn.dataset.idx, 10);
+      const list2 = readHistory();
+      const removed = list2[idx];
+      if (removed && removed.inventoryApplied) {
+        (removed.items || []).forEach((it) => { const match = findCatalogItem(it.productId, it.desc); if (match) match.sold = Math.max(0, round2((match.sold || 0) - (it.qty || 0))); });
+        saveItemsMaster(); renderItemsMasterTable();
+      }
+      list2.splice(idx, 1); writeHistory(list2); renderHistoryList(); renderReports();
+    }));
+  }
+
+  function loadInvoice(idx) {
+    const inv = readHistory()[idx];
+    if (!inv) return;
+    applySnapshotToForm(inv);
+    switchView("editor");
+    renderAll();
+  }
+
+  /* ===========================================================
+     REPORTS
+  =========================================================== */
+  function renderReports() {
+    const list = readHistory();
+    const cards = $("reportCards");
+    let taxable = 0, cgst = 0, sgst = 0, igst = 0, grand = 0;
+    list.forEach((inv) => { taxable += inv.taxable || 0; cgst += inv.cgst || 0; sgst += inv.sgst || 0; igst += inv.igst || 0; grand += inv.grandTotal || 0; });
+
+    cards.innerHTML = [
+      ["Invoices saved", list.length],
+      ["Taxable value", "₹" + fmt(taxable)],
+      ["CGST", "₹" + fmt(cgst)],
+      ["SGST", "₹" + fmt(sgst)],
+      ["IGST", "₹" + fmt(igst)],
+      ["Grand total", "₹" + fmt(grand)],
+    ].map(([label, val]) => `<div class="report-card"><span>${label}</span><strong>${val}</strong></div>`).join("");
+
+    const body = $("registerBody");
+    body.innerHTML = list.map((inv) => `
+      <tr>
+        <td>${formatDate(inv.invDate)}</td>
+        <td>${escapeHtml(inv.invNumber || "—")}</td>
+        <td>${escapeHtml(inv.custName || "—")}</td>
+        <td>${fmt(inv.taxable || 0)}</td>
+        <td>${fmt(inv.cgst || 0)}</td>
+        <td>${fmt(inv.sgst || 0)}</td>
+        <td>${fmt(inv.igst || 0)}</td>
+        <td>${fmt(inv.grandTotal || 0)}</td>
+      </tr>
+    `).join("") || `<tr><td colspan="8" style="text-align:center; font-style:italic; color:var(--ink-soft);">No invoices saved yet</td></tr>`;
+
+    $("registerFoot").innerHTML = list.length ? `
+      <tr style="font-weight:600;">
+        <td colspan="3">Total</td>
+        <td>${fmt(taxable)}</td><td>${fmt(cgst)}</td><td>${fmt(sgst)}</td><td>${fmt(igst)}</td><td>${fmt(grand)}</td>
+      </tr>` : "";
+  }
+
+  /* ===========================================================
+     SEND INVOICE
+  =========================================================== */
+  function refreshSendInvoiceList(){const select=$("sendInvoiceSelect");if(!select)return;const cur=select.value,list=readHistory();select.innerHTML='<option value="">Select an invoice...</option>'+list.map((inv,i)=>`<option value="${i}">Invoice ${escapeHtml(inv.invNumber||"—")} — ${escapeHtml(inv.custName||"No customer")} — ₹${fmt(inv.grandTotal||0)}</option>`).join("");if(cur&&list[cur])select.value=cur;}
+  function buildWhatsAppMessage(inv,name,address){const biz=getBusiness();return [`Hello ${name||inv.custName||"Customer"},`,`Please find your invoice from ${biz.name||"DEVBHOOMI BILL BOOK"}.`,`Invoice No: ${inv.invNumber||"—"}`,`Date: ${formatDate(inv.invDate)}`,`Amount: ₹${fmt(inv.grandTotal||0)}`,address?`Address: ${address}`:"","Thank you for your business!"].filter(Boolean).join("\n");}
+  function loadSendInvoice(){const idx=parseInt($("sendInvoiceSelect").value,10),inv=readHistory()[idx];if(!inv){$("sendMessage").value="";return;}$("sendCustomerName").value=inv.custName||"";$("sendCustomerPhone").value=inv.custContact||"";$("sendCustomerAddress").value=inv.custAddress||"";$("sendMessage").value=buildWhatsAppMessage(inv,inv.custName,inv.custAddress);$("sendStatus").textContent="Invoice loaded.";}
+  function normalizePhone(phone){return String(phone||"").replace(/\D/g,"").replace(/^0/,"");}
+  function getSelectedSendInvoice(){const idx=parseInt($("sendInvoiceSelect").value,10);return Number.isFinite(idx)?readHistory()[idx]:null;}
+  function sendSelectedInvoiceWhatsApp(){const inv=getSelectedSendInvoice();if(!inv){alert("Select a saved invoice first.");return;}const name=$("sendCustomerName").value.trim(),phone=normalizePhone($("sendCustomerPhone").value);if(!name){alert("Enter the customer name.");return;}if(phone.length!==10){alert("Enter a valid 10-digit Indian mobile number.");return;}const msg=$("sendMessage").value.trim()||buildWhatsAppMessage(inv,name,$("sendCustomerAddress").value.trim());window.open(`https://wa.me/91${phone}?text=${encodeURIComponent(msg)}`,"_blank","noopener");$("sendStatus").textContent="WhatsApp opened with the message ready to send.";}
+  async function downloadSelectedInvoicePdf(){const inv=getSelectedSendInvoice();if(!inv){alert("Select a saved invoice first.");return;}loadInvoice(readHistory().indexOf(inv));await new Promise(r=>setTimeout(r,100));downloadInvoicePdf();}
+
+  /* ===========================================================
+     NEW / RESET
+  =========================================================== */
+  function newInvoice() {
+    localStorage.removeItem(LS_DRAFT);
+    localStorage.removeItem(LS_DRAFT + ".backup");
+    itemsBody.innerHTML = "";
+    ["custName", "custAddress", "custGstin", "custState", "custStateCode", "custContact",
+     "shipName", "shipAddress", "shipGstin", "shipState", "shipStateCode", "shipContact",
+     "deliveryNote", "modeOfPayment", "referenceNo", "otherReferences", "buyersOrderNo",
+     "dispatchDocNo", "dispatchedThrough", "destination", "termsOfDelivery",
+     "bankName", "bankAccount", "bankBranchIfsc"].forEach((id) => { $(id).value = ""; });
+    applyBusinessBankDefaults(true);
+    $("invDate").value = todayISO();
+    $("invNumber").value = generateInvoiceNumber();
+    $("shipSameAsBuyer").checked = true;
+    syncConsignee();
+    addItemRow();
+    renderAll();
+    switchView("editor");
+  }
+
+  function generateInvoiceNumber() { return String(readHistory().length + 1); }
+
+  function resetAllData() {
+    if (!confirm("This clears every invoice, item, party, and business detail stored on this device. This cannot be undone. Continue?")) return;
+    [LS_BUSINESS, LS_HISTORY, LS_DRAFT, LS_DRAFT + ".backup", LS_ITEMS, LS_PARTIES].forEach((k) => localStorage.removeItem(k));
+    location.reload();
+  }
+
+  /* ===========================================================
+     VIEW SWITCHING
+  =========================================================== */
+  const VIEWS = ["editor", "history", "items", "parties", "reports", "send", "settings"];
+  function switchView(name) {
+    VIEWS.forEach((v) => $("view-" + v).classList.toggle("is-hidden", v !== name));
+    VIEWS.forEach((v) => { const btn = $("nav" + v.charAt(0).toUpperCase() + v.slice(1)); if (btn) btn.classList.remove("is-active"); });
+    const activeBtn = $("nav" + name.charAt(0).toUpperCase() + name.slice(1));
+    if (activeBtn) activeBtn.classList.add("is-active");
+    if (name === "history") renderHistoryList();
+    if (name === "items") renderItemsMasterTable();
+    if (name === "parties") renderPartiesMasterTable();
+    if (name === "reports") renderReports();
+    if (name === "send") refreshSendInvoiceList();
+  }
+
+  /* ===========================================================
+     INIT
+  =========================================================== */
+  function init() {
+    loadBusiness();
+    loadItemsMaster();
+    restoreExcelHandle();
+    loadPartiesMaster();
+    $("historyCount").textContent = readHistory().length;
+    $("itemsCount").textContent = itemsMaster.length;
+    $("partiesCount").textContent = partiesMaster.length;
+    refreshItemsDatalist();
+    refreshPartiesDatalist();
+    refreshPartyPicker();
+
+    $("declaration").value =
+      "1. Any disputes are subject to jurisdiction only.\n" +
+      "2. Interest will be charged @18% p.a. if payment is not made within due date.\n" +
+      "3. Cheque bounce charges Rs. 500/- will be taken back on goods once sold.";
+
+    // Restore an in-progress draft if one exists, otherwise start blank.
+    let draft = restoreDraftSafely();
+    if (draft && hasDraftContent(draft)) {
+      applySnapshotToForm(draft);
+      if (!$("invNumber").value) $("invNumber").value = generateInvoiceNumber();
+      if (!$("invDate").value) $("invDate").value = todayISO();
+      applyBusinessBankDefaults(false);
+    } else {
+      $("invDate").value = todayISO();
+      $("invNumber").value = generateInvoiceNumber();
+      applyBusinessBankDefaults(true);
+      addItemRow();
+    }
+
+    document.querySelectorAll("#view-editor input, #view-editor select, #view-editor textarea")
+      .forEach((el) => {
+        if (!el.closest(".item-row")) {
+          el.addEventListener("input", () => { renderAll(); saveDraft(); });
+          el.addEventListener("change", () => { renderAll(); saveDraft(); });
+        }
+      });
+
+    // Save synchronously whenever the browser is about to hide/unload the page.
+    window.addEventListener("pagehide", saveDraft);
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveDraft(); });
+
+    $("shipSameAsBuyer").addEventListener("change", () => { syncConsignee(); renderAll(); });
+    syncConsignee();
+
+    $("addItemBtn").addEventListener("click", () => { addItemRow(); renderAll(); });
+    $("submitInvoiceBtn").addEventListener("click", saveCurrentInvoice);
+    $("printBtn").addEventListener("click", () => window.print());
+    $("newBtn").addEventListener("click", () => newInvoice());
+    $("blankInvoiceBtn").addEventListener("click", () => newInvoice());
+
+    $("navEditor").addEventListener("click", () => switchView("editor"));
+    $("navHistory").addEventListener("click", () => switchView("history"));
+    $("navItems").addEventListener("click", () => switchView("items"));
+    $("navParties").addEventListener("click", () => switchView("parties"));
+    $("navReports").addEventListener("click", () => switchView("reports"));
+    $("navSend").addEventListener("click", () => switchView("send"));
+    $("navSettings").addEventListener("click", () => switchView("settings"));
+
+    $("saveBizBtn").addEventListener("click", saveBusiness);
+    $("resetAllBtn").addEventListener("click", resetAllData);
+
+    const saveHistBtn = document.createElement("button");
+    saveHistBtn.textContent = "Save to history";
+    saveHistBtn.className = "rail-ghost";
+    saveHistBtn.addEventListener("click", saveCurrentInvoice);
+    $("printBtn").insertAdjacentElement("afterend", saveHistBtn);
+
+    // Party picker + save-as-party
+    $("partyPicker").addEventListener("change", () => {
+      const p = partiesMaster.find((x) => x.id === $("partyPicker").value);
+      if (!p) return;
+      $("custName").value = p.name; $("custAddress").value = p.address; $("custGstin").value = p.gstin;
+      $("custState").value = p.state; $("custStateCode").value = p.stateCode; $("custContact").value = p.contact;
+      renderAll();
+    });
+    $("savePartyBtn").addEventListener("click", () => {
+      if (!$("custName").value.trim()) { alert("Enter a buyer name first."); return; }
+      upsertPartyMaster({
+        name: $("custName").value.trim(), address: $("custAddress").value, gstin: $("custGstin").value,
+        state: $("custState").value, stateCode: $("custStateCode").value, contact: $("custContact").value,
+      });
+      alert("Saved to Parties.");
+    });
+
+    // Items master toolbar
+    $("addItemMasterBtn").addEventListener("click", () => addItemMasterRow());
+    $("saveItemsCatalogBtn").addEventListener("click", saveItemsCatalogNow);
+    $("linkExcelBtn").addEventListener("click", linkExcelFile);
+    $("syncExcelBtn").addEventListener("click", manualSyncLinkedExcel);
+    $("importItemsBtn").addEventListener("click", () => $("importItemsFile").click());
+    $("importItemsFile").addEventListener("change", (e) => { if (e.target.files[0]) importItemsFromExcel(e.target.files[0]); e.target.value = ""; });
+    $("exportItemsBtn").addEventListener("click", exportItemsToExcel);
+    $("exportInventoryPptBtn").addEventListener("click", exportInventoryPpt);
+
+    // Parties master toolbar
+    $("addPartyMasterBtn").addEventListener("click", () => addPartyMasterRow());
+    $("importPartiesBtn").addEventListener("click", () => $("importPartiesFile").click());
+    $("importPartiesFile").addEventListener("change", (e) => { if (e.target.files[0]) importPartiesFromExcel(e.target.files[0]); e.target.value = ""; });
+    $("exportPartiesBtn").addEventListener("click", exportPartiesToExcel);
+
+    $("exportRegisterBtn").addEventListener("click", exportRegisterToExcel);
+    $("exportReportsPptBtn").addEventListener("click", exportReportsPpt);
+    $("downloadPdfBtn").addEventListener("click", downloadInvoicePdf);
+    $("downloadPptBtn").addEventListener("click", downloadInvoicePpt);
+    $("sendInvoiceSelect").addEventListener("change", loadSendInvoice);
+    $("sendWhatsAppBtn").addEventListener("click", sendSelectedInvoiceWhatsApp);
+    $("sendPdfBtn").addEventListener("click", downloadSelectedInvoicePdf);
+
+    renderAll();
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+})();
+
 </script>
 </body>
 </html>
- 
